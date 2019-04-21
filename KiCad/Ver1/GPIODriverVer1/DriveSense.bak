@@ -1,0 +1,264 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D04
+P 4750 2400
+AR Path="/5CD43D04" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D04" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 2725 50  0000 C CNN
+F 1 "LTV-356T" H 4750 2634 50  0000 C CNN
+F 2 "" H 4550 2200 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 2400 50  0001 L CNN
+	1    4750 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D0A
+P 4750 3000
+AR Path="/5CD43D0A" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D0A" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 3325 50  0000 C CNN
+F 1 "LTV-356T" H 4750 3234 50  0000 C CNN
+F 2 "" H 4550 2800 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 3000 50  0001 L CNN
+	1    4750 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D10
+P 4750 3550
+AR Path="/5CD43D10" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D10" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 3875 50  0000 C CNN
+F 1 "LTV-356T" H 4750 3784 50  0000 C CNN
+F 2 "" H 4550 3350 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 3550 50  0001 L CNN
+	1    4750 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D16
+P 4750 4100
+AR Path="/5CD43D16" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D16" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 4425 50  0000 C CNN
+F 1 "LTV-356T" H 4750 4334 50  0000 C CNN
+F 2 "" H 4550 3900 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 4100 50  0001 L CNN
+	1    4750 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D1C
+P 4750 4700
+AR Path="/5CD43D1C" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D1C" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 5025 50  0000 C CNN
+F 1 "LTV-356T" H 4750 4934 50  0000 C CNN
+F 2 "" H 4550 4500 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 4700 50  0001 L CNN
+	1    4750 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D22
+P 4750 5250
+AR Path="/5CD43D22" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D22" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 5575 50  0000 C CNN
+F 1 "LTV-356T" H 4750 5484 50  0000 C CNN
+F 2 "" H 4550 5050 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 5250 50  0001 L CNN
+	1    4750 5250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D28
+P 4750 5850
+AR Path="/5CD43D28" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D28" Ref="U?"  Part="1" 
+F 0 "U?" H 4750 6175 50  0000 C CNN
+F 1 "LTV-356T" H 4750 6084 50  0000 C CNN
+F 2 "" H 4550 5650 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4750 5850 50  0001 L CNN
+	1    4750 5850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 5CD43D2E
+P 4600 1400
+AR Path="/5CD43D2E" Ref="U?"  Part="1" 
+AR Path="/5CD1E7F0/5CD43D2E" Ref="U?"  Part="1" 
+F 0 "U?" H 4600 1725 50  0000 C CNN
+F 1 "LTV-356T" H 4600 1634 50  0000 C CNN
+F 2 "" H 4400 1200 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4600 1400 50  0001 L CNN
+	1    4600 1400
+	-1   0    0    -1  
+$EndComp
+Text HLabel 3700 1300 0    50   Input ~ 0
+D0_In
+Text HLabel 5750 1750 2    50   Output ~ 0
+D0_Out
+Text HLabel 2100 1300 0    50   Input ~ 0
+D1_In
+Text HLabel 2450 1100 0    50   Input ~ 0
+D2_In
+Text HLabel 2050 1500 0    50   Input ~ 0
+D3_In
+Text HLabel 2850 1400 0    50   Input ~ 0
+D4_In
+Text HLabel 2250 1600 0    50   Input ~ 0
+D5_In
+Text HLabel 3050 1200 0    50   Input ~ 0
+D6_In
+Text HLabel 3100 1300 0    50   Input ~ 0
+D7_In
+Text HLabel 5650 2300 2    50   Output ~ 0
+D1_Out
+Text HLabel 5600 2900 2    50   Output ~ 0
+D2_Out
+Text HLabel 5600 3450 2    50   Output ~ 0
+D3_Out
+Text HLabel 5550 4000 2    50   Output ~ 0
+D4_Out
+Text HLabel 5600 4600 2    50   Output ~ 0
+D5_Out
+Text HLabel 5650 5150 2    50   Output ~ 0
+D6_Out
+Text HLabel 5600 5750 2    50   Output ~ 0
+D7_Out
+Text HLabel 3700 800  0    50   UnSpc ~ 0
+VLogic
+$Comp
+L power:GND #PWR?
+U 1 1 5CD4CD0C
+P 5100 6050
+F 0 "#PWR?" H 5100 5800 50  0001 C CNN
+F 1 "GND" H 5105 5877 50  0000 C CNN
+F 2 "" H 5100 6050 50  0001 C CNN
+F 3 "" H 5100 6050 50  0001 C CNN
+	1    5100 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5950 5100 5950
+Wire Wire Line
+	5100 5950 5100 6050
+Wire Wire Line
+	5100 5950 5100 5350
+Connection ~ 5100 5950
+Wire Wire Line
+	5050 2500 5100 2500
+Wire Wire Line
+	5050 3100 5100 3100
+Connection ~ 5100 3100
+Wire Wire Line
+	5100 3100 5100 2500
+Wire Wire Line
+	5100 3650 5050 3650
+Connection ~ 5100 3650
+Wire Wire Line
+	5100 3650 5100 3100
+Wire Wire Line
+	5050 4200 5100 4200
+Connection ~ 5100 4200
+Wire Wire Line
+	5100 4200 5100 3650
+Wire Wire Line
+	5050 4800 5100 4800
+Connection ~ 5100 4800
+Wire Wire Line
+	5100 4800 5100 4200
+Wire Wire Line
+	5050 5350 5100 5350
+Connection ~ 5100 5350
+Wire Wire Line
+	5100 5350 5100 4800
+$Comp
+L Device:R_US R?
+U 1 1 5CD50C2A
+P 3950 1300
+F 0 "R?" V 3745 1300 50  0000 C CNN
+F 1 "100" V 3836 1300 50  0000 C CNN
+F 2 "" V 3990 1290 50  0001 C CNN
+F 3 "~" H 3950 1300 50  0001 C CNN
+	1    3950 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CD51F29
+P 4200 1050
+F 0 "R?" H 4268 1096 50  0000 L CNN
+F 1 "10k" H 4268 1005 50  0000 L CNN
+F 2 "" V 4240 1040 50  0001 C CNN
+F 3 "~" H 4200 1050 50  0001 C CNN
+	1    4200 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 800  4200 800 
+Wire Wire Line
+	4200 800  4200 900 
+Wire Wire Line
+	4100 1300 4200 1300
+Wire Wire Line
+	4200 1200 4200 1300
+Connection ~ 4200 1300
+Wire Wire Line
+	4200 1300 4300 1300
+Wire Wire Line
+	3800 1300 3700 1300
+$Comp
+L power:GND #PWR?
+U 1 1 5CD55563
+P 4200 1550
+F 0 "#PWR?" H 4200 1300 50  0001 C CNN
+F 1 "GND" H 4205 1377 50  0000 C CNN
+F 2 "" H 4200 1550 50  0001 C CNN
+F 3 "" H 4200 1550 50  0001 C CNN
+	1    4200 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1550 4200 1500
+Wire Wire Line
+	4200 1500 4300 1500
+$Comp
+L power:GND #PWR?
+U 1 1 5CD562EB
+P 5000 1550
+F 0 "#PWR?" H 5000 1300 50  0001 C CNN
+F 1 "GND" H 5005 1377 50  0000 C CNN
+F 2 "" H 5000 1550 50  0001 C CNN
+F 3 "" H 5000 1550 50  0001 C CNN
+	1    5000 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1500 5000 1500
+Wire Wire Line
+	5000 1500 5000 1550
+$EndSCHEMATC
