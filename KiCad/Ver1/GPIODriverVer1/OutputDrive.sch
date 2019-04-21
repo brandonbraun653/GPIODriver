@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:GPIODriverVer1-cache
 EELAYER 29 0
 EELAYER END
 $Descr A2 23386 16535

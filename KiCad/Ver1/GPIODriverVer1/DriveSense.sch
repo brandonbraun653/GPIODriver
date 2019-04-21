@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:GPIODriverVer1-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,162 +14,1044 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 3700 1300 0    50   Output ~ 0
+Text HLabel 900  1450 0    50   Output ~ 0
 D0_Out
-Text HLabel 2100 1300 0    50   Input ~ 0
+Text HLabel 2700 3600 2    50   Input ~ 0
 D1_In
-Text HLabel 2450 1100 0    50   Input ~ 0
+Text HLabel 2700 5450 2    50   Input ~ 0
 D2_In
-Text HLabel 2050 1500 0    50   Input ~ 0
+Text HLabel 5300 1750 2    50   Input ~ 0
 D3_In
-Text HLabel 2850 1400 0    50   Input ~ 0
+Text HLabel 5300 3600 2    50   Input ~ 0
 D4_In
-Text HLabel 2250 1600 0    50   Input ~ 0
+Text HLabel 5300 5450 2    50   Input ~ 0
 D5_In
-Text HLabel 3050 1200 0    50   Input ~ 0
+Text HLabel 7800 1750 2    50   Input ~ 0
 D6_In
-Text HLabel 3100 1300 0    50   Input ~ 0
+Text HLabel 7800 3600 2    50   Input ~ 0
 D7_In
-Text HLabel 5650 2300 2    50   Output ~ 0
+Text HLabel 900  3300 0    50   Output ~ 0
 D1_Out
-Text HLabel 5600 2900 2    50   Output ~ 0
+Text HLabel 900  5150 0    50   Output ~ 0
 D2_Out
-Text HLabel 5600 3450 2    50   Output ~ 0
+Text HLabel 3500 1450 0    50   Output ~ 0
 D3_Out
-Text HLabel 5550 4000 2    50   Output ~ 0
+Text HLabel 3500 3300 0    50   Output ~ 0
 D4_Out
-Text HLabel 5600 4600 2    50   Output ~ 0
+Text HLabel 3500 5150 0    50   Output ~ 0
 D5_Out
-Text HLabel 5650 5150 2    50   Output ~ 0
+Text HLabel 6000 1450 0    50   Output ~ 0
 D6_Out
-Text HLabel 5600 5750 2    50   Output ~ 0
+Text HLabel 6000 3300 0    50   Output ~ 0
 D7_Out
-Text HLabel 3700 800  0    50   UnSpc ~ 0
+Text HLabel 900  950  0    50   UnSpc ~ 0
 VLogic
 $Comp
 L Device:R_US R?
 U 1 1 5CD50C2A
-P 3950 1300
-F 0 "R?" V 3745 1300 50  0000 C CNN
-F 1 "100" V 3836 1300 50  0000 C CNN
-F 2 "" V 3990 1290 50  0001 C CNN
-F 3 "~" H 3950 1300 50  0001 C CNN
-	1    3950 1300
+P 1150 1450
+F 0 "R?" V 945 1450 50  0000 C CNN
+F 1 "100" V 1036 1450 50  0000 C CNN
+F 2 "" V 1190 1440 50  0001 C CNN
+F 3 "~" H 1150 1450 50  0001 C CNN
+	1    1150 1450
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_US R?
 U 1 1 5CD51F29
-P 4200 1050
-F 0 "R?" H 4268 1096 50  0000 L CNN
-F 1 "1k" H 4268 1005 50  0000 L CNN
-F 2 "" V 4240 1040 50  0001 C CNN
-F 3 "~" H 4200 1050 50  0001 C CNN
-	1    4200 1050
+P 1400 1200
+F 0 "R?" H 1468 1246 50  0000 L CNN
+F 1 "1k" H 1468 1155 50  0000 L CNN
+F 2 "" V 1440 1190 50  0001 C CNN
+F 3 "~" H 1400 1200 50  0001 C CNN
+	1    1400 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3700 800  4200 800 
+	900  950  1400 950 
 Wire Wire Line
-	4200 800  4200 900 
+	1400 950  1400 1050
 Wire Wire Line
-	4100 1300 4200 1300
+	1300 1450 1400 1450
 Wire Wire Line
-	4200 1200 4200 1300
+	1400 1350 1400 1450
 Wire Wire Line
-	3800 1300 3700 1300
+	1000 1450 900  1450
 $Comp
 L power:GND #PWR?
 U 1 1 5CD55563
-P 4200 2350
-F 0 "#PWR?" H 4200 2100 50  0001 C CNN
-F 1 "GND" H 4205 2177 50  0000 C CNN
-F 2 "" H 4200 2350 50  0001 C CNN
-F 3 "" H 4200 2350 50  0001 C CNN
-	1    4200 2350
+P 1400 2500
+F 0 "#PWR?" H 1400 2250 50  0001 C CNN
+F 1 "GND" H 1405 2327 50  0000 C CNN
+F 2 "" H 1400 2500 50  0001 C CNN
+F 3 "" H 1400 2500 50  0001 C CNN
+	1    1400 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_FET:2N7002 Q?
 U 1 1 5CD76E02
-P 4300 1600
+P 1500 1750
 AR Path="/5CD76E02" Ref="Q?"  Part="1" 
 AR Path="/5CBF3A4E/5CD76E02" Ref="Q?"  Part="1" 
 AR Path="/5CD1E7F0/5CD76E02" Ref="Q?"  Part="1" 
-F 0 "Q?" H 4506 1646 50  0000 L CNN
-F 1 "2N7002" H 4506 1555 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4500 1525 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 4300 1600 50  0001 L CNN
-	1    4300 1600
+F 0 "Q?" H 1706 1796 50  0000 L CNN
+F 1 "2N7002" H 1706 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 1675 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 1500 1750 50  0001 L CNN
+	1    1500 1750
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:D_Zener_ALT D?
 U 1 1 5CD98637
-P 4850 1900
+P 2050 2050
 AR Path="/5CD98637" Ref="D?"  Part="1" 
 AR Path="/5CBF3A4E/5CD98637" Ref="D?"  Part="1" 
 AR Path="/5CD1E7F0/5CD98637" Ref="D?"  Part="1" 
-F 0 "D?" H 4800 1700 50  0000 L CNN
-F 1 "BZX84C12" H 4600 1800 50  0000 L CNN
-F 2 "" H 4850 1900 50  0001 C CNN
-F 3 "~" H 4850 1900 50  0001 C CNN
-	1    4850 1900
+F 0 "D?" H 2000 1850 50  0000 L CNN
+F 1 "BZX84C12" H 1800 1950 50  0000 L CNN
+F 2 "" H 2050 2050 50  0001 C CNN
+F 3 "~" H 2050 2050 50  0001 C CNN
+	1    2050 2050
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R_US R?
 U 1 1 5CD98674
-P 4600 1900
-F 0 "R?" H 4450 1950 50  0000 L CNN
-F 1 "10k" H 4400 1850 50  0000 L CNN
-F 2 "" V 4640 1890 50  0001 C CNN
-F 3 "~" H 4600 1900 50  0001 C CNN
-	1    4600 1900
+P 1800 2050
+F 0 "R?" H 1650 2100 50  0000 L CNN
+F 1 "10k" H 1600 2000 50  0000 L CNN
+F 2 "" V 1840 2040 50  0001 C CNN
+F 3 "~" H 1800 2050 50  0001 C CNN
+	1    1800 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R?
 U 1 1 5CD9A138
-P 5250 1600
-F 0 "R?" V 5045 1600 50  0000 C CNN
-F 1 "1k" V 5136 1600 50  0000 C CNN
-F 2 "" V 5290 1590 50  0001 C CNN
-F 3 "~" H 5250 1600 50  0001 C CNN
-	1    5250 1600
+P 2450 1750
+F 0 "R?" V 2245 1750 50  0000 C CNN
+F 1 "1k" V 2336 1750 50  0000 C CNN
+F 2 "" V 2490 1740 50  0001 C CNN
+F 3 "~" H 2450 1750 50  0001 C CNN
+	1    2450 1750
 	0    1    1    0   
 $EndComp
-Text HLabel 5500 1600 2    50   Input ~ 0
+Text HLabel 2700 1750 2    50   Input ~ 0
 D0_In
 Wire Wire Line
-	4200 1800 4200 2200
+	1400 1950 1400 2350
 Wire Wire Line
-	4600 2050 4600 2200
+	1800 2200 1800 2350
 Wire Wire Line
-	4600 2200 4200 2200
-Connection ~ 4200 2200
+	1800 2350 1400 2350
+Connection ~ 1400 2350
 Wire Wire Line
-	4200 2200 4200 2350
+	1400 2350 1400 2500
 Wire Wire Line
-	4600 2200 4850 2200
+	1800 2350 2050 2350
 Wire Wire Line
-	4850 2200 4850 2050
-Connection ~ 4600 2200
+	2050 2350 2050 2200
+Connection ~ 1800 2350
 Wire Wire Line
-	4500 1600 4600 1600
+	1700 1750 1800 1750
 Wire Wire Line
-	4850 1750 4850 1600
-Connection ~ 4850 1600
+	2050 1900 2050 1750
+Connection ~ 2050 1750
 Wire Wire Line
-	4850 1600 5100 1600
+	2050 1750 2300 1750
 Wire Wire Line
-	4600 1750 4600 1600
-Connection ~ 4600 1600
+	1800 1900 1800 1750
+Connection ~ 1800 1750
 Wire Wire Line
-	4600 1600 4850 1600
+	1800 1750 2050 1750
 Wire Wire Line
-	5500 1600 5400 1600
+	2700 1750 2600 1750
 Wire Wire Line
-	4200 1300 4200 1400
-Connection ~ 4200 1300
+	1400 1450 1400 1550
+Connection ~ 1400 1450
+Text HLabel 900  2800 0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CBDA1C6
+P 1150 3300
+F 0 "R?" V 945 3300 50  0000 C CNN
+F 1 "100" V 1036 3300 50  0000 C CNN
+F 2 "" V 1190 3290 50  0001 C CNN
+F 3 "~" H 1150 3300 50  0001 C CNN
+	1    1150 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CBDA1CC
+P 1400 3050
+F 0 "R?" H 1468 3096 50  0000 L CNN
+F 1 "1k" H 1468 3005 50  0000 L CNN
+F 2 "" V 1440 3040 50  0001 C CNN
+F 3 "~" H 1400 3050 50  0001 C CNN
+	1    1400 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2800 1400 2800
+Wire Wire Line
+	1400 2800 1400 2900
+Wire Wire Line
+	1300 3300 1400 3300
+Wire Wire Line
+	1400 3200 1400 3300
+Wire Wire Line
+	1000 3300 900  3300
+$Comp
+L power:GND #PWR?
+U 1 1 5CBDA1D7
+P 1400 4350
+F 0 "#PWR?" H 1400 4100 50  0001 C CNN
+F 1 "GND" H 1405 4177 50  0000 C CNN
+F 2 "" H 1400 4350 50  0001 C CNN
+F 3 "" H 1400 4350 50  0001 C CNN
+	1    1400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CBDA1DD
+P 1500 3600
+AR Path="/5CBDA1DD" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CBDA1DD" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CBDA1DD" Ref="Q?"  Part="1" 
+F 0 "Q?" H 1706 3646 50  0000 L CNN
+F 1 "2N7002" H 1706 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 1500 3600 50  0001 L CNN
+	1    1500 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CBDA1E3
+P 2050 3900
+AR Path="/5CBDA1E3" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CBDA1E3" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CBDA1E3" Ref="D?"  Part="1" 
+F 0 "D?" H 2000 3700 50  0000 L CNN
+F 1 "BZX84C12" H 1800 3800 50  0000 L CNN
+F 2 "" H 2050 3900 50  0001 C CNN
+F 3 "~" H 2050 3900 50  0001 C CNN
+	1    2050 3900
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CBDA1E9
+P 1800 3900
+F 0 "R?" H 1650 3950 50  0000 L CNN
+F 1 "10k" H 1600 3850 50  0000 L CNN
+F 2 "" V 1840 3890 50  0001 C CNN
+F 3 "~" H 1800 3900 50  0001 C CNN
+	1    1800 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CBDA1EF
+P 2450 3600
+F 0 "R?" V 2245 3600 50  0000 C CNN
+F 1 "1k" V 2336 3600 50  0000 C CNN
+F 2 "" V 2490 3590 50  0001 C CNN
+F 3 "~" H 2450 3600 50  0001 C CNN
+	1    2450 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 3800 1400 4200
+Wire Wire Line
+	1800 4050 1800 4200
+Wire Wire Line
+	1800 4200 1400 4200
+Connection ~ 1400 4200
+Wire Wire Line
+	1400 4200 1400 4350
+Wire Wire Line
+	1800 4200 2050 4200
+Wire Wire Line
+	2050 4200 2050 4050
+Connection ~ 1800 4200
+Wire Wire Line
+	1700 3600 1800 3600
+Wire Wire Line
+	2050 3750 2050 3600
+Connection ~ 2050 3600
+Wire Wire Line
+	2050 3600 2300 3600
+Wire Wire Line
+	1800 3750 1800 3600
+Connection ~ 1800 3600
+Wire Wire Line
+	1800 3600 2050 3600
+Wire Wire Line
+	2700 3600 2600 3600
+Wire Wire Line
+	1400 3300 1400 3400
+Connection ~ 1400 3300
+Text HLabel 900  4650 0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CBEF852
+P 1150 5150
+F 0 "R?" V 945 5150 50  0000 C CNN
+F 1 "100" V 1036 5150 50  0000 C CNN
+F 2 "" V 1190 5140 50  0001 C CNN
+F 3 "~" H 1150 5150 50  0001 C CNN
+	1    1150 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CBEF858
+P 1400 4900
+F 0 "R?" H 1468 4946 50  0000 L CNN
+F 1 "1k" H 1468 4855 50  0000 L CNN
+F 2 "" V 1440 4890 50  0001 C CNN
+F 3 "~" H 1400 4900 50  0001 C CNN
+	1    1400 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  4650 1400 4650
+Wire Wire Line
+	1400 4650 1400 4750
+Wire Wire Line
+	1300 5150 1400 5150
+Wire Wire Line
+	1400 5050 1400 5150
+Wire Wire Line
+	1000 5150 900  5150
+$Comp
+L power:GND #PWR?
+U 1 1 5CBEF863
+P 1400 6200
+F 0 "#PWR?" H 1400 5950 50  0001 C CNN
+F 1 "GND" H 1405 6027 50  0000 C CNN
+F 2 "" H 1400 6200 50  0001 C CNN
+F 3 "" H 1400 6200 50  0001 C CNN
+	1    1400 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CBEF869
+P 1500 5450
+AR Path="/5CBEF869" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CBEF869" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CBEF869" Ref="Q?"  Part="1" 
+F 0 "Q?" H 1706 5496 50  0000 L CNN
+F 1 "2N7002" H 1706 5405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 5375 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 1500 5450 50  0001 L CNN
+	1    1500 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CBEF86F
+P 2050 5750
+AR Path="/5CBEF86F" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CBEF86F" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CBEF86F" Ref="D?"  Part="1" 
+F 0 "D?" H 2000 5550 50  0000 L CNN
+F 1 "BZX84C12" H 1800 5650 50  0000 L CNN
+F 2 "" H 2050 5750 50  0001 C CNN
+F 3 "~" H 2050 5750 50  0001 C CNN
+	1    2050 5750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CBEF875
+P 1800 5750
+F 0 "R?" H 1650 5800 50  0000 L CNN
+F 1 "10k" H 1600 5700 50  0000 L CNN
+F 2 "" V 1840 5740 50  0001 C CNN
+F 3 "~" H 1800 5750 50  0001 C CNN
+	1    1800 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CBEF87B
+P 2450 5450
+F 0 "R?" V 2245 5450 50  0000 C CNN
+F 1 "1k" V 2336 5450 50  0000 C CNN
+F 2 "" V 2490 5440 50  0001 C CNN
+F 3 "~" H 2450 5450 50  0001 C CNN
+	1    2450 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 5650 1400 6050
+Wire Wire Line
+	1800 5900 1800 6050
+Wire Wire Line
+	1800 6050 1400 6050
+Connection ~ 1400 6050
+Wire Wire Line
+	1400 6050 1400 6200
+Wire Wire Line
+	1800 6050 2050 6050
+Wire Wire Line
+	2050 6050 2050 5900
+Connection ~ 1800 6050
+Wire Wire Line
+	1700 5450 1800 5450
+Wire Wire Line
+	2050 5600 2050 5450
+Connection ~ 2050 5450
+Wire Wire Line
+	2050 5450 2300 5450
+Wire Wire Line
+	1800 5600 1800 5450
+Connection ~ 1800 5450
+Wire Wire Line
+	1800 5450 2050 5450
+Wire Wire Line
+	2700 5450 2600 5450
+Wire Wire Line
+	1400 5150 1400 5250
+Connection ~ 1400 5150
+Text HLabel 3500 950  0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CC2C8FD
+P 3750 1450
+F 0 "R?" V 3545 1450 50  0000 C CNN
+F 1 "100" V 3636 1450 50  0000 C CNN
+F 2 "" V 3790 1440 50  0001 C CNN
+F 3 "~" H 3750 1450 50  0001 C CNN
+	1    3750 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC2C903
+P 4000 1200
+F 0 "R?" H 4068 1246 50  0000 L CNN
+F 1 "1k" H 4068 1155 50  0000 L CNN
+F 2 "" V 4040 1190 50  0001 C CNN
+F 3 "~" H 4000 1200 50  0001 C CNN
+	1    4000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 950  4000 950 
+Wire Wire Line
+	4000 950  4000 1050
+Wire Wire Line
+	3900 1450 4000 1450
+Wire Wire Line
+	4000 1350 4000 1450
+Wire Wire Line
+	3600 1450 3500 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5CC2C90E
+P 4000 2500
+F 0 "#PWR?" H 4000 2250 50  0001 C CNN
+F 1 "GND" H 4005 2327 50  0000 C CNN
+F 2 "" H 4000 2500 50  0001 C CNN
+F 3 "" H 4000 2500 50  0001 C CNN
+	1    4000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CC2C914
+P 4100 1750
+AR Path="/5CC2C914" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CC2C914" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CC2C914" Ref="Q?"  Part="1" 
+F 0 "Q?" H 4306 1796 50  0000 L CNN
+F 1 "2N7002" H 4306 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4300 1675 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 4100 1750 50  0001 L CNN
+	1    4100 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CC2C91A
+P 4650 2050
+AR Path="/5CC2C91A" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CC2C91A" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CC2C91A" Ref="D?"  Part="1" 
+F 0 "D?" H 4600 1850 50  0000 L CNN
+F 1 "BZX84C12" H 4400 1950 50  0000 L CNN
+F 2 "" H 4650 2050 50  0001 C CNN
+F 3 "~" H 4650 2050 50  0001 C CNN
+	1    4650 2050
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC2C920
+P 4400 2050
+F 0 "R?" H 4250 2100 50  0000 L CNN
+F 1 "10k" H 4200 2000 50  0000 L CNN
+F 2 "" V 4440 2040 50  0001 C CNN
+F 3 "~" H 4400 2050 50  0001 C CNN
+	1    4400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC2C926
+P 5050 1750
+F 0 "R?" V 4845 1750 50  0000 C CNN
+F 1 "1k" V 4936 1750 50  0000 C CNN
+F 2 "" V 5090 1740 50  0001 C CNN
+F 3 "~" H 5050 1750 50  0001 C CNN
+	1    5050 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 1950 4000 2350
+Wire Wire Line
+	4400 2200 4400 2350
+Wire Wire Line
+	4400 2350 4000 2350
+Connection ~ 4000 2350
+Wire Wire Line
+	4000 2350 4000 2500
+Wire Wire Line
+	4400 2350 4650 2350
+Wire Wire Line
+	4650 2350 4650 2200
+Connection ~ 4400 2350
+Wire Wire Line
+	4300 1750 4400 1750
+Wire Wire Line
+	4650 1900 4650 1750
+Connection ~ 4650 1750
+Wire Wire Line
+	4650 1750 4900 1750
+Wire Wire Line
+	4400 1900 4400 1750
+Connection ~ 4400 1750
+Wire Wire Line
+	4400 1750 4650 1750
+Wire Wire Line
+	5300 1750 5200 1750
+Wire Wire Line
+	4000 1450 4000 1550
+Connection ~ 4000 1450
+Text HLabel 3500 2800 0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CC369FC
+P 3750 3300
+F 0 "R?" V 3545 3300 50  0000 C CNN
+F 1 "100" V 3636 3300 50  0000 C CNN
+F 2 "" V 3790 3290 50  0001 C CNN
+F 3 "~" H 3750 3300 50  0001 C CNN
+	1    3750 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC36A02
+P 4000 3050
+F 0 "R?" H 4068 3096 50  0000 L CNN
+F 1 "1k" H 4068 3005 50  0000 L CNN
+F 2 "" V 4040 3040 50  0001 C CNN
+F 3 "~" H 4000 3050 50  0001 C CNN
+	1    4000 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2800 4000 2800
+Wire Wire Line
+	4000 2800 4000 2900
+Wire Wire Line
+	3900 3300 4000 3300
+Wire Wire Line
+	4000 3200 4000 3300
+Wire Wire Line
+	3600 3300 3500 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5CC36A0D
+P 4000 4350
+F 0 "#PWR?" H 4000 4100 50  0001 C CNN
+F 1 "GND" H 4005 4177 50  0000 C CNN
+F 2 "" H 4000 4350 50  0001 C CNN
+F 3 "" H 4000 4350 50  0001 C CNN
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CC36A13
+P 4100 3600
+AR Path="/5CC36A13" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CC36A13" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CC36A13" Ref="Q?"  Part="1" 
+F 0 "Q?" H 4306 3646 50  0000 L CNN
+F 1 "2N7002" H 4306 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4300 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 4100 3600 50  0001 L CNN
+	1    4100 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CC36A19
+P 4650 3900
+AR Path="/5CC36A19" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CC36A19" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CC36A19" Ref="D?"  Part="1" 
+F 0 "D?" H 4600 3700 50  0000 L CNN
+F 1 "BZX84C12" H 4400 3800 50  0000 L CNN
+F 2 "" H 4650 3900 50  0001 C CNN
+F 3 "~" H 4650 3900 50  0001 C CNN
+	1    4650 3900
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC36A1F
+P 4400 3900
+F 0 "R?" H 4250 3950 50  0000 L CNN
+F 1 "10k" H 4200 3850 50  0000 L CNN
+F 2 "" V 4440 3890 50  0001 C CNN
+F 3 "~" H 4400 3900 50  0001 C CNN
+	1    4400 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC36A25
+P 5050 3600
+F 0 "R?" V 4845 3600 50  0000 C CNN
+F 1 "1k" V 4936 3600 50  0000 C CNN
+F 2 "" V 5090 3590 50  0001 C CNN
+F 3 "~" H 5050 3600 50  0001 C CNN
+	1    5050 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 3800 4000 4200
+Wire Wire Line
+	4400 4050 4400 4200
+Wire Wire Line
+	4400 4200 4000 4200
+Connection ~ 4000 4200
+Wire Wire Line
+	4000 4200 4000 4350
+Wire Wire Line
+	4400 4200 4650 4200
+Wire Wire Line
+	4650 4200 4650 4050
+Connection ~ 4400 4200
+Wire Wire Line
+	4300 3600 4400 3600
+Wire Wire Line
+	4650 3750 4650 3600
+Connection ~ 4650 3600
+Wire Wire Line
+	4650 3600 4900 3600
+Wire Wire Line
+	4400 3750 4400 3600
+Connection ~ 4400 3600
+Wire Wire Line
+	4400 3600 4650 3600
+Wire Wire Line
+	5300 3600 5200 3600
+Wire Wire Line
+	4000 3300 4000 3400
+Connection ~ 4000 3300
+Text HLabel 3500 4650 0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CC3DCC4
+P 3750 5150
+F 0 "R?" V 3545 5150 50  0000 C CNN
+F 1 "100" V 3636 5150 50  0000 C CNN
+F 2 "" V 3790 5140 50  0001 C CNN
+F 3 "~" H 3750 5150 50  0001 C CNN
+	1    3750 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC3DCCA
+P 4000 4900
+F 0 "R?" H 4068 4946 50  0000 L CNN
+F 1 "1k" H 4068 4855 50  0000 L CNN
+F 2 "" V 4040 4890 50  0001 C CNN
+F 3 "~" H 4000 4900 50  0001 C CNN
+	1    4000 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4650 4000 4650
+Wire Wire Line
+	4000 4650 4000 4750
+Wire Wire Line
+	3900 5150 4000 5150
+Wire Wire Line
+	4000 5050 4000 5150
+Wire Wire Line
+	3600 5150 3500 5150
+$Comp
+L power:GND #PWR?
+U 1 1 5CC3DCD5
+P 4000 6200
+F 0 "#PWR?" H 4000 5950 50  0001 C CNN
+F 1 "GND" H 4005 6027 50  0000 C CNN
+F 2 "" H 4000 6200 50  0001 C CNN
+F 3 "" H 4000 6200 50  0001 C CNN
+	1    4000 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CC3DCDB
+P 4100 5450
+AR Path="/5CC3DCDB" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CC3DCDB" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CC3DCDB" Ref="Q?"  Part="1" 
+F 0 "Q?" H 4306 5496 50  0000 L CNN
+F 1 "2N7002" H 4306 5405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4300 5375 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 4100 5450 50  0001 L CNN
+	1    4100 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CC3DCE1
+P 4650 5750
+AR Path="/5CC3DCE1" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CC3DCE1" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CC3DCE1" Ref="D?"  Part="1" 
+F 0 "D?" H 4600 5550 50  0000 L CNN
+F 1 "BZX84C12" H 4400 5650 50  0000 L CNN
+F 2 "" H 4650 5750 50  0001 C CNN
+F 3 "~" H 4650 5750 50  0001 C CNN
+	1    4650 5750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC3DCE7
+P 4400 5750
+F 0 "R?" H 4250 5800 50  0000 L CNN
+F 1 "10k" H 4200 5700 50  0000 L CNN
+F 2 "" V 4440 5740 50  0001 C CNN
+F 3 "~" H 4400 5750 50  0001 C CNN
+	1    4400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC3DCED
+P 5050 5450
+F 0 "R?" V 4845 5450 50  0000 C CNN
+F 1 "1k" V 4936 5450 50  0000 C CNN
+F 2 "" V 5090 5440 50  0001 C CNN
+F 3 "~" H 5050 5450 50  0001 C CNN
+	1    5050 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 5650 4000 6050
+Wire Wire Line
+	4400 5900 4400 6050
+Wire Wire Line
+	4400 6050 4000 6050
+Connection ~ 4000 6050
+Wire Wire Line
+	4000 6050 4000 6200
+Wire Wire Line
+	4400 6050 4650 6050
+Wire Wire Line
+	4650 6050 4650 5900
+Connection ~ 4400 6050
+Wire Wire Line
+	4300 5450 4400 5450
+Wire Wire Line
+	4650 5600 4650 5450
+Connection ~ 4650 5450
+Wire Wire Line
+	4650 5450 4900 5450
+Wire Wire Line
+	4400 5600 4400 5450
+Connection ~ 4400 5450
+Wire Wire Line
+	4400 5450 4650 5450
+Wire Wire Line
+	5300 5450 5200 5450
+Wire Wire Line
+	4000 5150 4000 5250
+Connection ~ 4000 5150
+Text HLabel 6000 950  0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CC46458
+P 6250 1450
+F 0 "R?" V 6045 1450 50  0000 C CNN
+F 1 "100" V 6136 1450 50  0000 C CNN
+F 2 "" V 6290 1440 50  0001 C CNN
+F 3 "~" H 6250 1450 50  0001 C CNN
+	1    6250 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC4645E
+P 6500 1200
+F 0 "R?" H 6568 1246 50  0000 L CNN
+F 1 "1k" H 6568 1155 50  0000 L CNN
+F 2 "" V 6540 1190 50  0001 C CNN
+F 3 "~" H 6500 1200 50  0001 C CNN
+	1    6500 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 950  6500 950 
+Wire Wire Line
+	6500 950  6500 1050
+Wire Wire Line
+	6400 1450 6500 1450
+Wire Wire Line
+	6500 1350 6500 1450
+Wire Wire Line
+	6100 1450 6000 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5CC46469
+P 6500 2500
+F 0 "#PWR?" H 6500 2250 50  0001 C CNN
+F 1 "GND" H 6505 2327 50  0000 C CNN
+F 2 "" H 6500 2500 50  0001 C CNN
+F 3 "" H 6500 2500 50  0001 C CNN
+	1    6500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CC4646F
+P 6600 1750
+AR Path="/5CC4646F" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CC4646F" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CC4646F" Ref="Q?"  Part="1" 
+F 0 "Q?" H 6806 1796 50  0000 L CNN
+F 1 "2N7002" H 6806 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6800 1675 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 6600 1750 50  0001 L CNN
+	1    6600 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CC46475
+P 7150 2050
+AR Path="/5CC46475" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CC46475" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CC46475" Ref="D?"  Part="1" 
+F 0 "D?" H 7100 1850 50  0000 L CNN
+F 1 "BZX84C12" H 6900 1950 50  0000 L CNN
+F 2 "" H 7150 2050 50  0001 C CNN
+F 3 "~" H 7150 2050 50  0001 C CNN
+	1    7150 2050
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC4647B
+P 6900 2050
+F 0 "R?" H 6750 2100 50  0000 L CNN
+F 1 "10k" H 6700 2000 50  0000 L CNN
+F 2 "" V 6940 2040 50  0001 C CNN
+F 3 "~" H 6900 2050 50  0001 C CNN
+	1    6900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC46481
+P 7550 1750
+F 0 "R?" V 7345 1750 50  0000 C CNN
+F 1 "1k" V 7436 1750 50  0000 C CNN
+F 2 "" V 7590 1740 50  0001 C CNN
+F 3 "~" H 7550 1750 50  0001 C CNN
+	1    7550 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 1950 6500 2350
+Wire Wire Line
+	6900 2200 6900 2350
+Wire Wire Line
+	6900 2350 6500 2350
+Connection ~ 6500 2350
+Wire Wire Line
+	6500 2350 6500 2500
+Wire Wire Line
+	6900 2350 7150 2350
+Wire Wire Line
+	7150 2350 7150 2200
+Connection ~ 6900 2350
+Wire Wire Line
+	6800 1750 6900 1750
+Wire Wire Line
+	7150 1900 7150 1750
+Connection ~ 7150 1750
+Wire Wire Line
+	7150 1750 7400 1750
+Wire Wire Line
+	6900 1900 6900 1750
+Connection ~ 6900 1750
+Wire Wire Line
+	6900 1750 7150 1750
+Wire Wire Line
+	7800 1750 7700 1750
+Wire Wire Line
+	6500 1450 6500 1550
+Connection ~ 6500 1450
+Text HLabel 6000 2800 0    50   UnSpc ~ 0
+VLogic
+$Comp
+L Device:R_US R?
+U 1 1 5CC53B82
+P 6250 3300
+F 0 "R?" V 6045 3300 50  0000 C CNN
+F 1 "100" V 6136 3300 50  0000 C CNN
+F 2 "" V 6290 3290 50  0001 C CNN
+F 3 "~" H 6250 3300 50  0001 C CNN
+	1    6250 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC53B88
+P 6500 3050
+F 0 "R?" H 6568 3096 50  0000 L CNN
+F 1 "1k" H 6568 3005 50  0000 L CNN
+F 2 "" V 6540 3040 50  0001 C CNN
+F 3 "~" H 6500 3050 50  0001 C CNN
+	1    6500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2800 6500 2800
+Wire Wire Line
+	6500 2800 6500 2900
+Wire Wire Line
+	6400 3300 6500 3300
+Wire Wire Line
+	6500 3200 6500 3300
+Wire Wire Line
+	6100 3300 6000 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5CC53B93
+P 6500 4350
+F 0 "#PWR?" H 6500 4100 50  0001 C CNN
+F 1 "GND" H 6505 4177 50  0000 C CNN
+F 2 "" H 6500 4350 50  0001 C CNN
+F 3 "" H 6500 4350 50  0001 C CNN
+	1    6500 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5CC53B99
+P 6600 3600
+AR Path="/5CC53B99" Ref="Q?"  Part="1" 
+AR Path="/5CBF3A4E/5CC53B99" Ref="Q?"  Part="1" 
+AR Path="/5CD1E7F0/5CC53B99" Ref="Q?"  Part="1" 
+F 0 "Q?" H 6806 3646 50  0000 L CNN
+F 1 "2N7002" H 6806 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6800 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 6600 3600 50  0001 L CNN
+	1    6600 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT D?
+U 1 1 5CC53B9F
+P 7150 3900
+AR Path="/5CC53B9F" Ref="D?"  Part="1" 
+AR Path="/5CBF3A4E/5CC53B9F" Ref="D?"  Part="1" 
+AR Path="/5CD1E7F0/5CC53B9F" Ref="D?"  Part="1" 
+F 0 "D?" H 7100 3700 50  0000 L CNN
+F 1 "BZX84C12" H 6900 3800 50  0000 L CNN
+F 2 "" H 7150 3900 50  0001 C CNN
+F 3 "~" H 7150 3900 50  0001 C CNN
+	1    7150 3900
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC53BA5
+P 6900 3900
+F 0 "R?" H 6750 3950 50  0000 L CNN
+F 1 "10k" H 6700 3850 50  0000 L CNN
+F 2 "" V 6940 3890 50  0001 C CNN
+F 3 "~" H 6900 3900 50  0001 C CNN
+	1    6900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CC53BAB
+P 7550 3600
+F 0 "R?" V 7345 3600 50  0000 C CNN
+F 1 "1k" V 7436 3600 50  0000 C CNN
+F 2 "" V 7590 3590 50  0001 C CNN
+F 3 "~" H 7550 3600 50  0001 C CNN
+	1    7550 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 3800 6500 4200
+Wire Wire Line
+	6900 4050 6900 4200
+Wire Wire Line
+	6900 4200 6500 4200
+Connection ~ 6500 4200
+Wire Wire Line
+	6500 4200 6500 4350
+Wire Wire Line
+	6900 4200 7150 4200
+Wire Wire Line
+	7150 4200 7150 4050
+Connection ~ 6900 4200
+Wire Wire Line
+	6800 3600 6900 3600
+Wire Wire Line
+	7150 3750 7150 3600
+Connection ~ 7150 3600
+Wire Wire Line
+	7150 3600 7400 3600
+Wire Wire Line
+	6900 3750 6900 3600
+Connection ~ 6900 3600
+Wire Wire Line
+	6900 3600 7150 3600
+Wire Wire Line
+	7800 3600 7700 3600
+Wire Wire Line
+	6500 3300 6500 3400
+Connection ~ 6500 3300
 $EndSCHEMATC
