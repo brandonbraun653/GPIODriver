@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name GPIODriverVer1-rescue)(type Legacy)(uri ${KIPRJMOD}/GPIODriverVer1-rescue.lib)(options "")(descr ""))
+  (lib (name NCV8452)(type Legacy)(uri D:/git/GitHub/KiCadLib/NCV8452/NCV8452.lib)(options "")(descr ""))
 )
