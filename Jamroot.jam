@@ -1,8 +1,72 @@
+import Software/lib/CommonTools/boost-build/features/chimera ;
+import Software/lib/CommonTools/boost-build/features/freertos ;
+import Software/lib/CommonTools/boost-build/features/thor ;
 
+# -----------------------------------------------
+# Rules
+# -----------------------------------------------
+local rule explicit_alias ( name : sources * : requirements * : default-build * : usage-requirements * )
+    {
+    alias $(name) : $(sources) : $(requirements) : $(default-build) : $(usage-requirements) ;
+    explicit $(name) ;
+    }
 
+# -----------------------------------------------
+# Project Paths
+# -----------------------------------------------
 path-constant TOP : . ;
-
 path-constant DOXYFILE_DIR : $(TOP)/Docs ; 
 path-constant DFLT_DOXY_XML_DIR : $(DOXYFILE_DIR)/doxygen_output/xml ;
 path-constant DFLT_DOXY_OUTPUT_DIR : $(DOXYFILE_DIR)/doxygen_output ;
 path-constant DFLT_SPHINX_OUTPUT_DIR : $(DOXYFILE_DIR)/sphinx_output ;
+
+
+# -----------------------------------------------
+# Sub-Projects
+# -----------------------------------------------
+use-project /GTEST : Software/lib/CommonTools/googletest ;
+use-project /FREERTOS : Software/lib/FreeRTOS ;
+use-project /CHIMERA : Software/lib/Chimera ;
+use-project /STM32F4 : Software/lib/stm32hal_f4 ;
+use-project /THOR : Software/lib/Thor ;
+use-project /PRJ : . ;
+
+local boost_install_dir = [ os.environ BOOST_ROOT ] ;
+path-constant boost_inc_dir : $(boost_install_dir)/boost_1_70_0 ;
+path-constant boost_lib_dir : $(boost_install_dir)/boost_1_70_0/stage/lib ;
+path-constant artifacts_dir : $(TOP)/artifacts ;
+
+# ------------------------------------------
+# /PRJ//XXXX Aliases
+# ------------------------------------------
+explicit_alias BOOST : : : : <include>$(boost_inc_dir) ;
+explicit_alias CHIMERA_DEFS ;
+explicit_alias CHIMERA_PORT : : : : <use>/THOR//CHIMERA_PORT ;
+explicit_alias FREERTOS_CFG : : : : <include>Software/src/cfg/FreeRTOS ;
+explicit_alias TARGET_OPTIONS : : : : <use>/THOR//TARGET_PROPAGATED_OPTIONS ;
+
+# -----------------------------------------------
+# Embedded systems driver project top level requirements
+# -----------------------------------------------
+project GPIODriver
+    :   requirements
+
+        <link>static
+        <toolset>gcc_arm_none_eabi      # Cortex-Mx compiler 
+        <cxxflags>"--std=gnu++17"       # Language standard required
+        <define>CHIMERA_LITTLE_ENDIAN   # We are a little endian processor
+
+        <FreeRTOS>enabled
+        <FreeRTOS-port>CortexM          # Per Thor chip type
+        <FreeRTOS-heap>heap4            # Allows for dynamic memory allocation
+
+        <Chimera>enabled
+        <Chimera-backend>Thor           # Link Chimera against the Thor drivers
+
+        <Thor>enabled                   # Turn on support for the STM32F446RE MCU
+        <Thor-family>F4
+        <Thor-chip>F446
+        <Thor-variant>RE
+
+    :   default-build debug
+    ;

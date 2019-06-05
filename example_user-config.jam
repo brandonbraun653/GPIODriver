@@ -1,0 +1,5 @@
+# This informs boost where to find the compiler executable on your PC. For this project, download 
+# the toolchain from here: https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
+
+# Refer to the project documentation on where to place this file.
+using gcc_arm_none_eabi : : "<pc_specific_path_for_toolchain>/bin/arm-none-eabi-g++" ;

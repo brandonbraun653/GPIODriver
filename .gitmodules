@@ -1,0 +1,15 @@
+[submodule "Software/lib/Chimera"]
+	path = Software/lib/Chimera
+	url = https://github.com/brandonbraun653/Chimera.git
+[submodule "Software/lib/Thor"]
+	path = Software/lib/Thor
+	url = https://github.com/brandonbraun653/Thor.git
+[submodule "Software/lib/FreeRTOS"]
+	path = Software/lib/FreeRTOS
+	url = https://github.com/brandonbraun653/FreeRTOS.git
+[submodule "Software/lib/stm32hal_f4"]
+	path = Software/lib/stm32hal_f4
+	url = https://github.com/brandonbraun653/STM32HAL_F4.git
+[submodule "Software/lib/CommonTools"]
+	path = Software/lib/CommonTools
+	url = https://github.com/brandonbraun653/CommonTools.git
