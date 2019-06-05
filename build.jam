@@ -1,0 +1,48 @@
+import os ;
+import notfile ;
+
+local rule explicit_alias ( name : sources * : requirements * : default-build * : usage-requirements * )
+    {
+    alias $(name) : $(sources) : $(requirements) : $(default-build) : $(usage-requirements) ;
+    explicit $(name) ;
+    }
+
+#------------------------------------------------
+# Documentation Targets:
+#   All the latest documentation for this project is archived in the 
+#   Docs/ folder pre-built. Simply open the index.html files for each
+#
+# Instructions for setting up Doxygen and Sphinx can be found here: 
+# https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/
+#
+# The latest documentation for breathe can be found here:
+# https://buildmedia.readthedocs.org/media/pdf/breathe/latest/breathe.pdf
+#------------------------------------------------
+explicit_alias docs : doxygen sphinx ;      # Builds all the documentation (recommended target)
+explicit_alias doxygen : create_doxygen ;   # Builds only the Doxygen docs
+explicit_alias sphinx : create_sphinx ;     # Builds only the Sphinx docs
+
+notfile create_doxygen : @action_create_doxygen ;
+actions action_create_doxygen
+{
+    cd $(DOXYFILE_DIR)
+    doxygen
+}
+
+notfile create_sphinx : @action_create_sphinx ;
+actions action_create_sphinx
+{
+    sphinx-build $(DOXYFILE_DIR) $(DFLT_SPHINX_OUTPUT_DIR)
+}
+
+notfile help : @action_help ;
+actions action_help
+{
+    echo ""
+    echo "GPIO Driver"
+    echo "Description: Firmware driver for custom digital IO testing hardware"
+    echo "Author: Brandon Braun"
+    echo "Available Targets:"
+    echo "    help: Prints this message"
+    echo "    docs: Generates all documentation"
+}

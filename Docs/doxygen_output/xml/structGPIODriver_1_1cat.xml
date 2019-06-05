@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structGPIODriver_1_1cat" kind="struct" language="C++" prot="public">
+    <compoundname>GPIODriver::cat</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGPIODriver_1_1cat_1a2cb8244ee32dffa307575252f7f69708" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GPIODriver::cat::type1</definition>
+        <argsstring></argsstring>
+        <name>type1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="21" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGPIODriver_1_1cat_1a01a66b1e6de4bf6035e437c6d4400075" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GPIODriver::cat::type2</definition>
+        <argsstring></argsstring>
+        <name>type2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="22" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="20" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" bodystart="19" bodyend="23"/>
+    <listofallmembers>
+      <member refid="structGPIODriver_1_1cat_1a2cb8244ee32dffa307575252f7f69708" prot="public" virt="non-virtual"><scope>GPIODriver::cat</scope><name>type1</name></member>
+      <member refid="structGPIODriver_1_1cat_1a01a66b1e6de4bf6035e437c6d4400075" prot="public" virt="non-virtual"><scope>GPIODriver::cat</scope><name>type2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classGPIODriver_1_1CommandParser" kind="class" language="C++" prot="public">
+    <compoundname>GPIODriver::CommandParser</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGPIODriver_1_1CommandParser_1a7dd155dfe50ef6dbe3c4b653a468ccfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GPIODriver::CommandParser::CommandParser</definition>
+        <argsstring>()</argsstring>
+        <name>CommandParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="29" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classGPIODriver_1_1CommandParser_1ae1be16d37931b1e90725b21e48afa013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GPIODriver::CommandParser::~CommandParser</definition>
+        <argsstring>()</argsstring>
+        <name>~CommandParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="30" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classGPIODriver_1_1CommandParser_1a90fc819fe50b455b1edf85f4aa71876c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIODriver::CommandParser::somefunc</definition>
+        <argsstring>()</argsstring>
+        <name>somefunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="32" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" line="26" column="1" bodyfile="/home/brandon/git/GitHub/GPIODriver/Software/src/command_parser.hpp" bodystart="25" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classGPIODriver_1_1CommandParser_1a7dd155dfe50ef6dbe3c4b653a468ccfa" prot="public" virt="non-virtual"><scope>GPIODriver::CommandParser</scope><name>CommandParser</name></member>
+      <member refid="classGPIODriver_1_1CommandParser_1a90fc819fe50b455b1edf85f4aa71876c" prot="public" virt="non-virtual"><scope>GPIODriver::CommandParser</scope><name>somefunc</name></member>
+      <member refid="classGPIODriver_1_1CommandParser_1ae1be16d37931b1e90725b21e48afa013" prot="public" virt="non-virtual"><scope>GPIODriver::CommandParser</scope><name>~CommandParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

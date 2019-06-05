@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_4e9c05acfa2c3671b8618fcb95d57d96" kind="dir">
+    <compoundname>/home/brandon/git/GitHub/GPIODriver/Software</compoundname>
+    <innerdir refid="dir_34b56258a8177ac57eef2f2294fc5caa">/home/brandon/git/GitHub/GPIODriver/Software/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/brandon/git/GitHub/GPIODriver/Software/"/>
+  </compounddef>
+</doxygen>

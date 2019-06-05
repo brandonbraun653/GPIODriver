@@ -1,0 +1,8 @@
+
+
+path-constant TOP : . ;
+
+path-constant DOXYFILE_DIR : $(TOP)/Docs ; 
+path-constant DFLT_DOXY_XML_DIR : $(DOXYFILE_DIR)/doxygen_output/xml ;
+path-constant DFLT_DOXY_OUTPUT_DIR : $(DOXYFILE_DIR)/doxygen_output ;
+path-constant DFLT_SPHINX_OUTPUT_DIR : $(DOXYFILE_DIR)/sphinx_output ;
