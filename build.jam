@@ -1,5 +1,8 @@
 import os ;
 import notfile ;
+import Software/lib/CommonTools/boost-build/features/chimera ;
+import Software/lib/CommonTools/boost-build/features/freertos ;
+import Software/lib/CommonTools/boost-build/features/thor ;
 
 local rule explicit_alias ( name : sources * : requirements * : default-build * : usage-requirements * )
     {
@@ -46,3 +49,23 @@ actions action_help
     echo "    help: Prints this message"
     echo "    docs: Generates all documentation"
 }
+
+#------------------------------------------------
+# Embedded Targets
+#------------------------------------------------
+
+exe gpio_driver_exe
+    :   /GPIODRIVER//CORE
+
+    :   <FreeRTOS>enabled
+        <FreeRTOS-port>CortexM          # Per Thor chip type
+        <FreeRTOS-heap>heap4            # Allows for dynamic memory allocation
+
+        <Chimera>enabled
+        <Chimera-backend>Thor           # Link Chimera against the Thor drivers
+
+        <Thor>enabled                   # Turn on support for the STM32F446RE MCU
+        <Thor-family>F4
+        <Thor-chip>F446
+        <Thor-variant>RE
+    ;

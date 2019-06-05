@@ -1,3 +1,4 @@
+import os ;
 import Software/lib/CommonTools/boost-build/features/chimera ;
 import Software/lib/CommonTools/boost-build/features/freertos ;
 import Software/lib/CommonTools/boost-build/features/thor ;
@@ -29,6 +30,7 @@ use-project /FREERTOS : Software/lib/FreeRTOS ;
 use-project /CHIMERA : Software/lib/Chimera ;
 use-project /STM32F4 : Software/lib/stm32hal_f4 ;
 use-project /THOR : Software/lib/Thor ;
+use-project /GPIODRIVER : Software/src ;
 use-project /PRJ : . ;
 
 local boost_install_dir = [ os.environ BOOST_ROOT ] ;
@@ -68,5 +70,5 @@ project GPIODriver
         <Thor-chip>F446
         <Thor-variant>RE
 
-    :   default-build debug
+    :   default-build debug <toolset>gcc_arm_none_eabi
     ;
