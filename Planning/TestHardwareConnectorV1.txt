@@ -1,0 +1,13 @@
+Expected Connections:
+    - +3.3v Power, 5W max
+    - +5.0v Power, 5W max
+    - +12.0v Power, 10W max
+    - Power Ground
+    - Signal Ground
+    - UART x2
+    - SPI x1, 3 chip selects
+    - I2C x2
+    - 5 GPIO
+    - 3-pin resistor ID variant (place near the first few pins)
+
+Minimum # of Pins: 27
