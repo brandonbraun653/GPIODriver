@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/Software/lib/Chimera"
+                "${workspaceFolder}/Software/lib/Chimera",
+                "${workspaceFolder}/Software/lib/cxxopts/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

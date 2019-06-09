@@ -31,6 +31,7 @@ use-project /CHIMERA : Software/lib/Chimera ;
 use-project /STM32F4 : Software/lib/stm32hal_f4 ;
 use-project /THOR : Software/lib/Thor ;
 use-project /GPIODRIVER : Software/src ;
+use-project /CXXOPTS : Software/lib/cxxopts ;
 use-project /PRJ : . ;
 
 local boost_install_dir = [ os.environ BOOST_ROOT ] ;

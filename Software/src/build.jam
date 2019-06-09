@@ -33,6 +33,7 @@ lib CORE
         <use>/THOR//PUB
         <use>/CHIMERA//PUB
         <use>/FREERTOS//PUB
+        <use>/CXXOPTS//PUB
         <use>/PRJ//FREERTOS_CFG
         <use>/PRJ//TARGET_OPTIONS
     ;

@@ -13,6 +13,9 @@
 
 /* Chimera Includes */
 
+/* Project Includes */
+#include <io_resources.hpp>
+
 
 int main()
 {

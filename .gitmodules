@@ -13,3 +13,6 @@
 [submodule "Software/lib/CommonTools"]
 	path = Software/lib/CommonTools
 	url = https://github.com/brandonbraun653/CommonTools.git
+[submodule "Software/lib/cxxopts"]
+	path = Software/lib/cxxopts
+	url = https://github.com/brandonbraun653/cxxopts.git
