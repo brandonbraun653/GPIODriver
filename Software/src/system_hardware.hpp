@@ -24,7 +24,17 @@ namespace GPIODriver::HW
 {
   namespace Serial
   {
-    static constexpr uint8_t SERIAL_CHANNEL                        = 4;
+    /*-------------------------------------------------
+    User Interface Objects 
+    -------------------------------------------------*/
+    extern Chimera::Serial::SerialClass_sPtr terminal;      /* Global object for tx/rx on terminal to PC */ 
+    extern Chimera::Serial::SerialClass_sPtr terminalDebug; /* Global object for the debug port */
+
+    /*-------------------------------------------------
+    Object Configuration Options
+    -------------------------------------------------*/
+    static constexpr uint8_t SERIAL_CHANNEL_TERMINAL               = 4;
+    static constexpr uint8_t SERIAL_CHANNEL_TERMINAL_DBG           = 2;
     static constexpr Chimera::Serial::BaudRate SERIAL_BAUD         = Chimera::Serial::BaudRate::SERIAL_BAUD_115200;
     static constexpr Chimera::Serial::CharWid SERIAL_BITWIDTH      = Chimera::Serial::CharWid::CW_8BIT;
     static constexpr Chimera::Serial::FlowControl SERIAL_FLOW_CTRL = Chimera::Serial::FlowControl::FCTRL_NONE;
@@ -59,6 +69,14 @@ namespace GPIODriver::HW
 
   namespace GPIO
   {
+    /*-------------------------------------------------
+    User Interface Objects 
+    -------------------------------------------------*/
+    extern Chimera::GPIO::GPIOClass_sPtr powerEnable;     /* Global GPIO object that drives the power enable/disable pin */
+
+    /*-------------------------------------------------
+    Object Configuration Options
+    -------------------------------------------------*/
     /* clang-format off */
     static constexpr Chimera::GPIO::PinInit GPIO_PWR_ENABLE = {
       Chimera::GPIO::Pull::NO_PULL,               
@@ -74,6 +92,17 @@ namespace GPIODriver::HW
 
   namespace SPI
   {
+    /*-------------------------------------------------
+    User Interface Objects 
+    -------------------------------------------------*/
+    extern Chimera::SPI::SPIClass_sPtr instance;  /* Global SPI Accessor Object */
+    extern Chimera::GPIO::GPIOClass_sPtr cs0;     /* Global SPI Chip Select 0 Object */
+    extern Chimera::GPIO::GPIOClass_sPtr cs1;     /* Global SPI Chip Select 1 Object */
+    extern Chimera::GPIO::GPIOClass_sPtr cs2;     /* Global SPI Chip Select 2 Object */
+
+    /*-------------------------------------------------
+    Object Configuration Options
+    -------------------------------------------------*/
     static constexpr uint8_t SPI_CHANNEL                      = 3;
     static constexpr Chimera::SPI::Mode SPI_MODE              = Chimera::SPI::Mode::MASTER;
     static constexpr Chimera::SPI::BitOrder SPI_BIT_ORDER     = Chimera::SPI::BitOrder::LSB_FIRST;
