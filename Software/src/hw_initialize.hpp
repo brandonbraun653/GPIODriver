@@ -1,12 +1,12 @@
 /********************************************************************************
-*   File Name:
-*       
-*
-*   Description:
-*       
-*
-*   2019 | Brandon Braun | brandonbraun653@gmail.com
-********************************************************************************/
+ *   File Name:
+ *    hw_initialize.hpp
+ *
+ *   Description:
+ *    Provides initialization routines for all hardware resources.
+ *
+ *   2019 | Brandon Braun | brandonbraun653@gmail.com
+ ********************************************************************************/
 
 #pragma once
 #ifndef GPIO_DRIVER_HARDWARE_INITIALIZE_HPP
@@ -21,8 +21,8 @@ namespace GPIODriver::HW
   {
     Chimera::Status_t initializeTerminal();
 
-    Chimera::Status_t initializeDebugTerminal(); 
-  }
+    Chimera::Status_t initializeDebugTerminal();
+  }  // namespace Serial
 
   namespace SPI
   {
@@ -33,6 +33,11 @@ namespace GPIODriver::HW
   {
     Chimera::Status_t initializeGPIO();
   }
-}
+
+  namespace Watchdog
+  {
+    Chimera::Status_t initializeWatchdog();
+  }
+}  // namespace GPIODriver::HW
 
 #endif /* !GPIO_DRIVER_HARDWARE_INITIALIZE_HPP */
