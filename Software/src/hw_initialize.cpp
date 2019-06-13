@@ -8,6 +8,9 @@
  *   2019 | Brandon Braun | brandonbraun653@gmail.com
  ********************************************************************************/
 
+/* C++ Includes */
+#include <cstring>
+
 /* Boost Includes */
 #include <boost/circular_buffer.hpp>
 
@@ -17,6 +20,7 @@
 #include <Chimera/spi.hpp>
 #include <Chimera/watchdog.hpp>
 #include <Chimera/constants/common.hpp>
+#include <Chimera/types/event_types.hpp>
 
 /* Project Includes */
 #include <system_hardware.hpp>
@@ -68,9 +72,7 @@ namespace GPIODriver::HW
                   static_cast<uint32_t>( SERIAL_FLOW_CTRL ) );
 
         terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
-
-        // TODO: Change to wait for transfer complete
-        Chimera::delayMilliseconds( 100 );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
 
         /*------------------------------------------------
         Perform the actual initialization
@@ -125,9 +127,7 @@ namespace GPIODriver::HW
       {
         snprintf( message.data(), message.size(), "GPIO Driver Version %s Debug Terminal\r\n", firmwareVersion.data() );
         terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
-
-        // TODO: Change this into a wait for transfer complete...this is a dma message...
-        Chimera::delayMilliseconds( 100 );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
       }
 
       return result;
@@ -143,9 +143,12 @@ namespace GPIODriver::HW
 
     Chimera::Status_t initializeSPI()
     {
+      using namespace GPIODriver::HW::Serial;
       using namespace GPIODriver::HW::SPI;
 
       Chimera::Status_t result = Chimera::CommonStatusCodes::OK;
+      std::array<char, 50> message;
+      message.fill( 0 );
 
       /*------------------------------------------------
       Initialize the core SPI driver module
@@ -180,6 +183,13 @@ namespace GPIODriver::HW
       cs2 = std::make_shared<Chimera::GPIO::GPIOClass>();
       result |= cs2->init( SPI_CS2_PIN );
 
+      if ( result == Chimera::CommonStatusCodes::OK )
+      {
+        snprintf( message.data(), message.size(), "SPI Driver Initialized On Channel: %d\r\n", spiSetup.channel );
+        terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
+      }
+
       return result;
     }
   }  // namespace SPI
@@ -192,7 +202,11 @@ namespace GPIODriver::HW
 
     Chimera::Status_t initializeGPIO()
     {
+      using namespace GPIODriver::HW::Serial;
+
       Chimera::Status_t result = Chimera::CommonStatusCodes::OK;
+      std::array<char, 50> message;
+      message.fill( 0 );
 
       /*------------------------------------------------
       LED 0 Init
@@ -211,6 +225,13 @@ namespace GPIODriver::HW
       ------------------------------------------------*/
       heartBeat = std::make_shared<Chimera::GPIO::GPIOClass>();
       result |= heartBeat->init( HEARTBEAT_INIT );
+
+      if ( result == Chimera::CommonStatusCodes::OK )
+      {
+        snprintf( message.data(), message.size(), "GPIO Pins Initialized\r\n" );
+        terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
+      }
 
       return result;
     }

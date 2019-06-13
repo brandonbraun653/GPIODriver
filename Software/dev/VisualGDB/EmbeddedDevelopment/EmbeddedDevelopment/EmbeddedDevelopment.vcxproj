@@ -128,6 +128,7 @@
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\serial_intf.hpp" />
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\spi_intf.hpp" />
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\system_intf.hpp" />
+    <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\threading_intf.hpp" />
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\watchdog_intf.hpp" />
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\logging.hpp" />
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\memory.hpp" />

@@ -43,7 +43,7 @@ namespace GPIODriver::HW
     static constexpr Chimera::Serial::FlowControl SERIAL_FLOW_CTRL = Chimera::Serial::FlowControl::FCTRL_NONE;
     static constexpr Chimera::Serial::Parity SERIAL_PARITY         = Chimera::Serial::Parity::PAR_NONE;
     static constexpr Chimera::Serial::StopBits SERIAL_STOP_BITS    = Chimera::Serial::StopBits::SBITS_ONE;
-    static constexpr Chimera::Hardware::SubPeripheralMode SERIAL_TXFR_MODE = Chimera::Hardware::SubPeripheralMode::DMA;
+    static constexpr Chimera::Hardware::SubPeripheralMode SERIAL_TXFR_MODE = Chimera::Hardware::SubPeripheralMode::INTERRUPT;
 
     static constexpr size_t SERIAL_BUFFER_SIZE = 150;
 

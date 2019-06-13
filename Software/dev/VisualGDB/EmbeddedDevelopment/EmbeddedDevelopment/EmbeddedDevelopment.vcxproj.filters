@@ -1331,6 +1331,9 @@
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\constants\common.hpp">
       <Filter>Chimera\constants</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\threading_intf.hpp">
+      <Filter>Chimera\interface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\src\thread_boot.cpp">
