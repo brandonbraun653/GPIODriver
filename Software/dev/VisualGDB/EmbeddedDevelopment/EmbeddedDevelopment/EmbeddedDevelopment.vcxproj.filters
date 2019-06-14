@@ -148,6 +148,12 @@
     <Filter Include="Header files\Device-specific files\Semihosting/Profiler">
       <UniqueIdentifier>{862bdec2-d413-459e-91ee-3218da76df56}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Thor\drivers\f4\usart">
+      <UniqueIdentifier>{c656aa9a-f07b-4423-b7aa-e9fdb1508312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thor\drivers\f4\system">
+      <UniqueIdentifier>{60f3087a-1a51-4156-93ed-1c7a2fe09324}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="stm32.props">
@@ -1334,6 +1340,21 @@
     <ClInclude Include="..\..\..\..\lib\Chimera\Chimera\interface\threading_intf.hpp">
       <Filter>Chimera\interface</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_driver.hpp">
+      <Filter>Thor\drivers\f4\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_types.hpp">
+      <Filter>Thor\drivers\f4\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_register_stm32f446xx.hpp">
+      <Filter>Thor\drivers\f4\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_prj.hpp">
+      <Filter>Thor\drivers\f4\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\system\sys_memory_map_stm32f446xx.hpp">
+      <Filter>Thor\drivers\f4\system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\src\thread_boot.cpp">
@@ -1347,6 +1368,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\thread_heartbeat.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_driver_stm32f4.cpp">
+      <Filter>Thor\drivers\f4\usart</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

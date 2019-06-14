@@ -73,6 +73,7 @@
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\defaults\serial_defaults.cpp" />
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\defaults\spi_defaults.cpp" />
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\drivers\f4\thor_ethernet_stm32f4.cpp" />
+    <ClCompile Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_driver_stm32f4.cpp" />
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\sram.cpp" />
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\thor.cpp" />
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\thor_boost_stub.cpp" />
@@ -172,6 +173,11 @@
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\definitions\usart_definitions.hpp" />
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\dma.hpp" />
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\Ethernet.hpp" />
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\system\sys_memory_map_stm32f446xx.hpp" />
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_driver.hpp" />
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_prj.hpp" />
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_register_stm32f446xx.hpp" />
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\usart\hw_usart_types.hpp" />
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\ethernet.hpp" />
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\exceptions.hpp" />
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\exti.hpp" />
