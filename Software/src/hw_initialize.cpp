@@ -196,9 +196,11 @@ namespace GPIODriver::HW
 
   namespace GPIO
   {
-    Chimera::GPIO::GPIOClass_sPtr powerEnable = nullptr;
-    Chimera::GPIO::GPIOClass_sPtr statusLED0  = nullptr;
-    Chimera::GPIO::GPIOClass_sPtr heartBeat   = nullptr;
+    Chimera::GPIO::GPIOClass_sPtr powerEnable    = nullptr;
+    Chimera::GPIO::GPIOClass_sPtr statusLED0     = nullptr;
+    Chimera::GPIO::GPIOClass_sPtr heartBeat      = nullptr;
+    Chimera::GPIO::GPIOClass_sPtr sourceDriverOE = nullptr;
+    Chimera::GPIO::GPIOClass_sPtr sinkDriverOE   = nullptr;
 
     Chimera::Status_t initializeGPIO()
     {
@@ -225,6 +227,18 @@ namespace GPIODriver::HW
       ------------------------------------------------*/
       heartBeat = std::make_shared<Chimera::GPIO::GPIOClass>();
       result |= heartBeat->init( HEARTBEAT_INIT );
+
+      /*------------------------------------------------
+      Source Driver OE Init
+      ------------------------------------------------*/
+      sourceDriverOE = std::make_shared<Chimera::GPIO::GPIOClass>();
+      result |= sourceDriverOE->init( SOURCE_DRIVER_OE_INIT );
+
+      /*------------------------------------------------
+      Sink Driver OE Init
+      ------------------------------------------------*/
+      sinkDriverOE = std::make_shared<Chimera::GPIO::GPIOClass>();
+      result |= sinkDriverOE->init( SINK_DRIVER_OE_INIT );
 
       if ( result == Chimera::CommonStatusCodes::OK )
       {

@@ -42,10 +42,16 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <ClCompile>
       <CPPLanguageStandard>CPP1Z</CPPLanguageStandard>
-      <PreprocessorDefinitions>%(ClCompile.PreprocessorDefinitions);DEBUG=1;USE_FREERTOS;USING_FREERTOS;USE_FULL_LL_DRIVER;BOOST_NO_EXCEPTIONS;STM32F446xx;;CHIMERA_LITTLE_ENDIAN;</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)../../../../src;$(ProjectDir)../../../../src/cfg/FreeRTOS;$(ProjectDir)../../../../lib/Thor/Thor/config/chimera;$(ProjectDir)../../../../lib/Thor;$(ProjectDir)../../../../lib/Chimera;$(ProjectDir)../../../../lib/stm32hal_f4;$(ProjectDir)../../../../lib/FreeRTOS/portable/GCC/ARM_CM4F;$(ProjectDir)../../../../lib/FreeRTOS/include;$(BOOST_ROOT)/boost_1_70_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;USE_FREERTOS;USING_FREERTOS;USE_FULL_LL_DRIVER;BOOST_NO_EXCEPTIONS;STM32F446xx;CHIMERA_LITTLE_ENDIAN;DEBUG_DEFAULT_INTERRUPT_HANDLERS;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../../src;$(ProjectDir)../../../../src/cfg/FreeRTOS;$(ProjectDir)../../../../lib/Thor/Thor/config/chimera;$(ProjectDir)../../../../lib/Thor;$(ProjectDir)../../../../lib/Chimera;$(ProjectDir)../../../../lib/stm32hal_f4;$(ProjectDir)../../../../lib/FreeRTOS/portable/GCC/ARM_CM4F;$(ProjectDir)../../../../lib/FreeRTOS/include;$(BOOST_ROOT)/boost_1_70_0;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Og</Optimization>
     </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
     <ClCompile>
@@ -95,8 +101,10 @@
     <ClCompile Include="..\..\..\..\lib\Thor\Thor\thor_watchdog.cpp" />
     <ClCompile Include="..\..\..\..\src\cfg\FreeRTOS\freertos_hooks_prj.cpp" />
     <ClCompile Include="..\..\..\..\src\command_parser.cpp" />
+    <ClCompile Include="..\..\..\..\src\dbg\thread_debug_sandbox.cpp" />
     <ClCompile Include="..\..\..\..\src\hw_initialize.cpp" />
     <ClCompile Include="..\..\..\..\src\main.cpp" />
+    <ClCompile Include="..\..\..\..\src\system_control.cpp" />
     <ClCompile Include="..\..\..\..\src\system_threads.cpp" />
     <ClCompile Include="..\..\..\..\src\thread_boot.cpp" />
     <ClCompile Include="..\..\..\..\src\thread_command_parser.cpp" />
@@ -223,6 +231,7 @@
     <ClInclude Include="..\..\..\..\src\command_parser.hpp" />
     <ClInclude Include="..\..\..\..\src\hw_initialize.hpp" />
     <ClInclude Include="..\..\..\..\src\io_resources.hpp" />
+    <ClInclude Include="..\..\..\..\src\system_control.hpp" />
     <ClInclude Include="..\..\..\..\src\system_hardware.hpp" />
     <ClInclude Include="..\..\..\..\src\system_threads.hpp" />
     <ClInclude Include="..\..\..\..\src\version.hpp" />

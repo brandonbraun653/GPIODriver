@@ -12,5 +12,5 @@
 
 namespace GPIODriver::Thread
 {
-  std::array<TaskHandle_t, MAX_GPIO_DRIVER_THREADS> handle;
+  std::array<TaskHandle_t, MAX_GPIO_DRIVER_THREADS> handle{};
 }

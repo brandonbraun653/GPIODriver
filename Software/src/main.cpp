@@ -30,9 +30,10 @@ int main()
 
   Thread::handle.fill( nullptr );
 
-  addThread( GPIODriver::Thread::BootUpThread, "boot", 500, nullptr, 2, &Thread::handle[ Thread::ID::BOOT_THREAD ] );
-  addThread( GPIODriver::Thread::HeartbeatThread, "heartbeat", 100, nullptr, 2,
-             &Thread::handle[ Thread::ID::HEARTBEAT_THREAD ] );
+
+  addThread( Thread::DebugSandboxThread, "sandbox", 1000, nullptr, 2, &Thread::handle[ Thread::ID::SANDBOX_THREAD ] );
+  addThread( Thread::BootUpThread, "boot", 500, nullptr, 2, &Thread::handle[ Thread::ID::BOOT_THREAD ] );
+  addThread( Thread::HeartbeatThread, "heartbeat", 100, nullptr, 2, &Thread::handle[ Thread::ID::HEARTBEAT_THREAD ] );
 
 
   startScheduler();

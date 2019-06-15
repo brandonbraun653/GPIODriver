@@ -31,6 +31,7 @@ namespace GPIODriver::Thread
     INPUT_UPDATE_THREAD,
     SUPPORT_THREAD,
     HEARTBEAT_THREAD,
+    SANDBOX_THREAD,
 
     MAX_GPIO_DRIVER_THREADS
   };
@@ -41,7 +42,7 @@ namespace GPIODriver::Thread
    */
   enum MSG : uint32_t
   {
-    INITIALIZE = 0,
+    INITIALIZE = 0xf99aec78,
     EXECUTE,
     
     MAX_GPIO_DRIVER_THREAD_MSG
@@ -90,6 +91,12 @@ namespace GPIODriver::Thread
    *  updating configuration settings, etc.
    */
   void SupportThread( void *argument );
+
+  /**
+   *  Generic thread used to test out ideas or when debugging the
+   *  application in general. It makes for a good sandbox to play in.
+   */
+  void DebugSandboxThread( void *argument );
 }
 
 #endif /* !GPIO_DRIVER_SYSTEM_THREADS_HPP */

@@ -97,6 +97,8 @@ namespace GPIODriver::HW
     extern Chimera::GPIO::GPIOClass_sPtr powerEnable;     /* Global GPIO object that drives the power enable/disable pin */
     extern Chimera::GPIO::GPIOClass_sPtr statusLED0;      /* Global GPIO object that drives a status led */
     extern Chimera::GPIO::GPIOClass_sPtr heartBeat;       /* Global GPIO heartbeat led object */
+    extern Chimera::GPIO::GPIOClass_sPtr sourceDriverOE;
+    extern Chimera::GPIO::GPIOClass_sPtr sinkDriverOE;
 
     /*-------------------------------------------------
     Object Configuration Options
@@ -126,6 +128,24 @@ namespace GPIODriver::HW
       Chimera::GPIO::Drive::OUTPUT_PUSH_PULL,  
       Chimera::GPIO::State::HIGH,                 
       9,                                          
+      0  
+    };
+
+    static constexpr Chimera::GPIO::PinInit SOURCE_DRIVER_OE_INIT = {
+      Chimera::GPIO::Pull::NO_PULL,               
+      Chimera::GPIO::Port::PORTB,                 
+      Chimera::GPIO::Drive::OUTPUT_PUSH_PULL,  
+      Chimera::GPIO::State::HIGH,                 
+      10,                                          
+      0  
+    };
+
+    static constexpr Chimera::GPIO::PinInit SINK_DRIVER_OE_INIT = {
+      Chimera::GPIO::Pull::NO_PULL,               
+      Chimera::GPIO::Port::PORTA,                 
+      Chimera::GPIO::Drive::OUTPUT_PUSH_PULL,  
+      Chimera::GPIO::State::HIGH,                 
+      8,                                          
       0  
     };
     /* clang-format on */
