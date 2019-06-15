@@ -54,7 +54,7 @@ namespace GPIODriver::HW
       std::array<char, 250> message;
       message.fill( 0 );
 
-      if ( terminalDebug->reserve( Chimera::Threading::DEFAULT_LOCK_TIMEOUT_MS ) == CommonStatusCodes::OK )
+      if ( terminalDebug->lock( Chimera::Threading::DEFAULT_LOCK_TIMEOUT_MS ) == CommonStatusCodes::OK )
       {
         /*------------------------------------------------
         Debug header for ease of use/PC logging purposes
@@ -88,7 +88,7 @@ namespace GPIODriver::HW
 
         result = terminal->begin( SERIAL_TXFR_MODE, SERIAL_TXFR_MODE );
 
-        terminalDebug->release();
+        terminalDebug->unlock();
       }
       else
       {

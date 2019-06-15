@@ -154,6 +154,21 @@
     <Filter Include="Thor\drivers\f4\system">
       <UniqueIdentifier>{60f3087a-1a51-4156-93ed-1c7a2fe09324}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Thor\drivers\f4\common">
+      <UniqueIdentifier>{01f0fa02-3e1f-42d0-8e82-5f889324bdfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thor\drivers\f4\uart">
+      <UniqueIdentifier>{c898805b-3bce-4e9e-a637-3c80935bbcbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thor\drivers\model">
+      <UniqueIdentifier>{5a4403c2-3029-4993-b530-f6171399478d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thor\drivers\common">
+      <UniqueIdentifier>{c6867a91-861a-40c9-835f-3ba9a113d21d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thor\drivers\common\types">
+      <UniqueIdentifier>{ad2b50cc-cba6-4d7b-a1d8-5ebc04cb17af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="stm32.props">
@@ -1354,6 +1369,48 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\system\sys_memory_map_stm32f446xx.hpp">
       <Filter>Thor\drivers\f4\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\common\types.hpp">
+      <Filter>Thor\drivers\f4\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\uart\hw_uart_driver.hpp">
+      <Filter>Thor\drivers\f4\uart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\uart\hw_uart_prj.hpp">
+      <Filter>Thor\drivers\f4\uart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\uart\hw_uart_types.hpp">
+      <Filter>Thor\drivers\f4\uart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\uart\hw_uart_register_stm32f446xx.hpp">
+      <Filter>Thor\drivers\f4\uart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\model\serial_model.hpp">
+      <Filter>Thor\drivers\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\common\types\serial_types.hpp">
+      <Filter>Thor\drivers\common\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\model\callback_model.hpp">
+      <Filter>Thor\drivers\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\common\types\callback_types.hpp">
+      <Filter>Thor\drivers\common\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\Uart.hpp">
+      <Filter>Thor\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\Usart.hpp">
+      <Filter>Thor\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\f4\uart\hw_uart_stubs.hpp">
+      <Filter>Thor\drivers\f4\uart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\model\interrupt_model.hpp">
+      <Filter>Thor\drivers\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\lib\Thor\Thor\drivers\common\types\interrupt_types.hpp">
+      <Filter>Thor\drivers\common\types</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
