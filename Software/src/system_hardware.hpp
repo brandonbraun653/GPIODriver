@@ -176,7 +176,7 @@ namespace GPIODriver::HW
     static constexpr Chimera::SPI::ClockMode SPI_CLOCK_MODE             = Chimera::SPI::ClockMode::MODE0;
     static constexpr Chimera::SPI::DataSize SPI_DATA_SIZE               = Chimera::SPI::DataSize::SZ_8BIT;
     static constexpr Chimera::SPI::ChipSelectMode SPI_CS_MODE           = Chimera::SPI::ChipSelectMode::MANUAL;
-    static constexpr Chimera::Hardware::SubPeripheralMode SPI_TXFR_MODE = Chimera::Hardware::SubPeripheralMode::DMA;
+    static constexpr Chimera::Hardware::SubPeripheralMode SPI_TXFR_MODE = Chimera::Hardware::SubPeripheralMode::BLOCKING;
 
     /* clang-format off */
     static constexpr Chimera::GPIO::PinInit SPI_SCK_PIN = {
@@ -220,16 +220,16 @@ namespace GPIODriver::HW
       Chimera::GPIO::Port::PORTA,                 
       Chimera::GPIO::Drive::OUTPUT_PUSH_PULL,  
       Chimera::GPIO::State::HIGH,                 
-      2,                                          
+      9,                                          
       0  
     };
 
     static constexpr Chimera::GPIO::PinInit SPI_CS2_PIN = {
       Chimera::GPIO::Pull::NO_PULL,               
-      Chimera::GPIO::Port::PORTA,                 
+      Chimera::GPIO::Port::PORTC,                 
       Chimera::GPIO::Drive::OUTPUT_PUSH_PULL,  
       Chimera::GPIO::State::HIGH,                 
-      3,                                          
+      7,                                          
       0  
     };
     /* clang-format on */
