@@ -28,6 +28,11 @@ namespace GPIODriver
   Default if unable to read PCB ID resistors
   -------------------------------------------------*/
   static const std::string_view hardwareVersion = "0.0.0";
+
+  /*------------------------------------------------
+  Development Tag Version
+  ------------------------------------------------*/
+  static const std::string_view gitVersion = "1.00b#";
 }
 
 #endif /* !GPIO_DRIVER_VERSION_HPP */
