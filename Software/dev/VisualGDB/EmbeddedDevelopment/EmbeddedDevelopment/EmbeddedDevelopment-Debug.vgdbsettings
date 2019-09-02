@@ -56,6 +56,7 @@
         <SearchInIncludeSubdirs>true</SearchInIncludeSubdirs>
       </DiscoverySettings>
       <CheckForClangFormatFiles>true</CheckForClangFormatFiles>
+      <ExplicitClangFormatFile>..\..\..\..\src\.clang-format</ExplicitClangFormatFile>
       <FormattingEngine xsi:nil="true" />
     </ExtraSettings>
     <CodeAnalyzerSettings>
@@ -121,7 +122,7 @@
       </Configuration>
     </DebugMethod>
     <AutoDetectRTOS>true</AutoDetectRTOS>
-    <SemihostingSupport>Auto</SemihostingSupport>
+    <SemihostingSupport>Enabled</SemihostingSupport>
     <SemihostingPollingDelay>0</SemihostingPollingDelay>
     <StepIntoEntryPoint>false</StepIntoEntryPoint>
     <ReloadFirmwareOnReset>false</ReloadFirmwareOnReset>
@@ -154,8 +155,9 @@
       </RTOSFeatures>
     </DynamicAnalysisSettings>
     <EndOfStackSymbol>_estack</EndOfStackSymbol>
-    <TimestampProviderTicksPerSecond>0</TimestampProviderTicksPerSecond>
-    <KeepConsoleAfterExit>false</KeepConsoleAfterExit>
+    <TimestampProvider>com.sysprogs.arm.dwt</TimestampProvider>
+    <TimestampProviderTicksPerSecond>128000000</TimestampProviderTicksPerSecond>
+    <KeepConsoleAfterExit>true</KeepConsoleAfterExit>
     <CheckInterfaceDrivers>true</CheckInterfaceDrivers>
   </Debug>
 </VisualGDBProjectSettings2>

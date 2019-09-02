@@ -22,7 +22,7 @@ namespace GPIODriver
   the hardware ID, this will help define a supported
   feature set.
   -------------------------------------------------*/
-  static const std::string_view firmwareVersion = "0.0.1";
+  static const std::string_view firmwareVersion = "0.0.2";
 
   /*-------------------------------------------------
   Default if unable to read PCB ID resistors

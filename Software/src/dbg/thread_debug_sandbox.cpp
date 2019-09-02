@@ -38,13 +38,13 @@ namespace GPIODriver::Thread
     uint8_t sinkCounter   = ~sourceCounter;
 
     Power::enable();
-    Source::enable();
-    Sink::enable();
+//    Source::enable();
+//    Sink::enable();
 
     while ( 1 )
     {
-      Source::write( &sourceCounter, sizeof( sourceCounter ) );
-      Sink::write( &sourceCounter, sizeof( sourceCounter ) );
+//      Source::write( &sourceCounter, sizeof( sourceCounter ) );
+//      Sink::write( &sourceCounter, sizeof( sourceCounter ) );
       Chimera::delayMilliseconds( 100 );
 
       sourceCounter++;

@@ -25,11 +25,20 @@ namespace GPIODriver::Thread
 {
   void HeartbeatThread( void *argument )
   {
-    
+    /*------------------------------------------------
+    Wait for the boot thread to wake us up
+    ------------------------------------------------*/
     Threading::signalSetupComplete();
-
-    /* Wait for the boot thread to wake us up */
     auto wakeup = ulTaskNotifyTake( pdTRUE, portMAX_DELAY );
+
+    /*------------------------------------------------
+    Thread initialization order isn't guaranteed, so wait until
+    the hardware signals it is ready to go.
+    ------------------------------------------------*/
+    while ( !HW::GPIO::initialized() )
+    {
+      Chimera::delayMilliseconds( 25 );
+    }
 
     /*------------------------------------------------
     Just for fun, add a nice little startup pulsing
@@ -44,6 +53,9 @@ namespace GPIODriver::Thread
     }
     delayMilliseconds( 675 );
 
+    /*------------------------------------------------
+    Main loop simply just beats the heart
+    ------------------------------------------------*/
     while ( 1 )
     {
       HW::GPIO::heartBeat->setState( Chimera::GPIO::State::HIGH );

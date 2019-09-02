@@ -31,6 +31,18 @@ namespace GPIODriver::HW
 
   namespace GPIO
   {
+    /**
+     *  Checks if the GPIO hardware has been fully initialized yet.
+     *
+     *  @return bool    True if initialized, false if not
+     */
+    bool initialized();
+
+    /**
+     *  Initializes the GPIO hardware resources
+     *
+     *  @return Chimera::Status_t 
+     */
     Chimera::Status_t initializeGPIO();
   }
 

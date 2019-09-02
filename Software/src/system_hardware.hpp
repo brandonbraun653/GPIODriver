@@ -18,6 +18,7 @@
 
 /* Chimera Includes */
 #include <Chimera/chimera.hpp>
+#include <Chimera/gpio.hpp>
 #include <Chimera/types/serial_types.hpp>
 #include <Chimera/types/gpio_types.hpp>
 #include <Chimera/types/spi_types.hpp>
@@ -36,53 +37,53 @@ namespace GPIODriver::HW
     /*-------------------------------------------------
     Object Configuration Options
     -------------------------------------------------*/
-    static constexpr uint8_t SERIAL_CHANNEL_TERMINAL               = 4;
-    static constexpr uint8_t SERIAL_CHANNEL_TERMINAL_DBG           = 3;
+    static constexpr uint8_t SERIAL_CHANNEL_TERMINAL               = 3;
+    static constexpr uint8_t SERIAL_CHANNEL_TERMINAL_DBG           = 2;
     static constexpr Chimera::Serial::BaudRate SERIAL_BAUD         = Chimera::Serial::BaudRate::SERIAL_BAUD_115200;
     static constexpr Chimera::Serial::CharWid SERIAL_BITWIDTH      = Chimera::Serial::CharWid::CW_8BIT;
     static constexpr Chimera::Serial::FlowControl SERIAL_FLOW_CTRL = Chimera::Serial::FlowControl::FCTRL_NONE;
     static constexpr Chimera::Serial::Parity SERIAL_PARITY         = Chimera::Serial::Parity::PAR_NONE;
     static constexpr Chimera::Serial::StopBits SERIAL_STOP_BITS    = Chimera::Serial::StopBits::SBITS_ONE;
-    static constexpr Chimera::Hardware::SubPeripheralMode SERIAL_TXFR_MODE = Chimera::Hardware::SubPeripheralMode::INTERRUPT;
+    static constexpr Chimera::Hardware::SubPeripheralMode SERIAL_TXFR_MODE = Chimera::Hardware::SubPeripheralMode::DMA;
 
     static constexpr size_t SERIAL_BUFFER_SIZE = 150;
 
     /* clang-format off */
-    static constexpr Chimera::Serial::IOPins TERMINAL_GPIO_INIT = {
+    static constexpr Chimera::Serial::IOPins TERMINAL_DBG_GPIO_INIT = {
       { /* TX Pin */
-        Chimera::GPIO::Pull::NO_PULL,               
+        Chimera::GPIO::Pull::PULL_UP,               
         Chimera::GPIO::Port::PORTA,                 
         Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
         Chimera::GPIO::State::HIGH,                 
-        0,                                          
-        GPIO_AF8_UART4                              
+        2,                                          
+        Thor::Driver::GPIO::AF7_USART2                     
       },
       { /* RX Pin */
-        Chimera::GPIO::Pull::NO_PULL,               
+        Chimera::GPIO::Pull::PULL_UP,               
         Chimera::GPIO::Port::PORTA,                 
         Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
         Chimera::GPIO::State::HIGH,                 
-        1,                                          
-        GPIO_AF8_UART4                              
+        3,                                          
+        Thor::Driver::GPIO::AF7_USART2                         
       }
     };
 
-    static constexpr Chimera::Serial::IOPins TERMINAL_DBG_GPIO_INIT = {
+    static constexpr Chimera::Serial::IOPins TERMINAL_GPIO_INIT = {
       { /* TX Pin */
-        Chimera::GPIO::Pull::NO_PULL,               
+        Chimera::GPIO::Pull::PULL_UP,               
         Chimera::GPIO::Port::PORTC,                 
         Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
         Chimera::GPIO::State::HIGH,                 
         10,                                          
-        GPIO_AF7_USART3                             
+        Thor::Driver::GPIO::AF7_USART3                             
       },
       { /* RX Pin */
-        Chimera::GPIO::Pull::NO_PULL,               
+        Chimera::GPIO::Pull::PULL_UP,               
         Chimera::GPIO::Port::PORTC,                 
         Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
         Chimera::GPIO::State::HIGH,                 
         11,                                          
-        GPIO_AF7_USART3                              
+        Thor::Driver::GPIO::AF7_USART3                              
       }
     };
     /* clang-format on */
@@ -185,7 +186,7 @@ namespace GPIODriver::HW
       Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
       Chimera::GPIO::State::HIGH,                 
       3,                                          
-      GPIO_AF6_SPI3  
+      Thor::Driver::GPIO::AF6_SPI3  
     };
 
     static constexpr Chimera::GPIO::PinInit SPI_MOSI_PIN = {
@@ -194,7 +195,7 @@ namespace GPIODriver::HW
       Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
       Chimera::GPIO::State::HIGH,                 
       5,                                          
-      GPIO_AF6_SPI3  
+      Thor::Driver::GPIO::AF6_SPI3  
     };
 
     static constexpr Chimera::GPIO::PinInit SPI_MISO_PIN = {
@@ -203,7 +204,7 @@ namespace GPIODriver::HW
       Chimera::GPIO::Drive::ALTERNATE_PUSH_PULL,  
       Chimera::GPIO::State::HIGH,                 
       4,                                          
-      GPIO_AF6_SPI3  
+      Thor::Driver::GPIO::AF6_SPI3  
     };
 
     static constexpr Chimera::GPIO::PinInit SPI_CS0_PIN = {

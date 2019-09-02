@@ -13,6 +13,7 @@
 
 /* Chimera Includes */
 #include <Chimera/chimera.hpp>
+#include <Chimera/system.hpp>
 #include <Chimera/threading.hpp>
 #include <Chimera/watchdog.hpp>
 
@@ -26,10 +27,8 @@ using namespace GPIODriver;
 
 int main()
 {
-  ChimeraInit();
-
+  Chimera::System::initialize();
   Thread::handle.fill( nullptr );
-
 
   addThread( Thread::DebugSandboxThread, "sandbox", 1000, nullptr, 2, &Thread::handle[ Thread::ID::SANDBOX_THREAD ] );
   addThread( Thread::BootUpThread, "boot", 500, nullptr, 2, &Thread::handle[ Thread::ID::BOOT_THREAD ] );
@@ -41,6 +40,6 @@ int main()
   /*------------------------------------------------
   Should never get here. If we do, allow the watchdog to reset the board.
   ------------------------------------------------*/
-  Watchdog::invokeTimeout();
+  //Watchdog::invokeTimeout();
   return 0;
 }

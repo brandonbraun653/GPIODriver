@@ -44,6 +44,12 @@ namespace GPIODriver::HW
     static std::array<uint8_t, SERIAL_BUFFER_SIZE> rx_buffer_term;
     static std::array<uint8_t, SERIAL_BUFFER_SIZE> tx_buffer_term;
 
+    static const Chimera::Serial::Config serialConfig = { static_cast<uint32_t>( SERIAL_BAUD ), 
+                                                          SERIAL_BITWIDTH, 
+                                                          SERIAL_PARITY,
+                                                          SERIAL_STOP_BITS, 
+                                                          SERIAL_FLOW_CTRL };
+
     Chimera::Status_t initializeTerminal()
     {
       using namespace Chimera;
@@ -72,15 +78,14 @@ namespace GPIODriver::HW
                   static_cast<uint32_t>( SERIAL_FLOW_CTRL ) );
 
         terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
-        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE, nullptr, 1000 );
 
         /*------------------------------------------------
         Perform the actual initialization
         ------------------------------------------------*/
         terminal = std::make_shared<Chimera::Serial::SerialClass>();
         terminal->assignHW( SERIAL_CHANNEL_TERMINAL, TERMINAL_GPIO_INIT );
-        terminal->configure( static_cast<uint32_t>( SERIAL_BAUD ), SERIAL_BITWIDTH, SERIAL_PARITY, SERIAL_STOP_BITS,
-                             SERIAL_FLOW_CTRL );
+        terminal->configure( serialConfig );
 
         terminal->enableBuffering( Hardware::SubPeripheral::TX, &tx_cb_term, tx_buffer_term.data(), tx_buffer_term.size() );
         terminal->enableBuffering( Hardware::SubPeripheral::RX, &rx_cb_term, rx_buffer_term.data(), rx_buffer_term.size() );
@@ -112,11 +117,12 @@ namespace GPIODriver::HW
       ------------------------------------------------*/
       terminalDebug = std::make_shared<Chimera::Serial::SerialClass>();
       terminalDebug->assignHW( SERIAL_CHANNEL_TERMINAL_DBG, TERMINAL_DBG_GPIO_INIT );
-      terminalDebug->configure( static_cast<uint32_t>( SERIAL_BAUD ), SERIAL_BITWIDTH, SERIAL_PARITY, SERIAL_STOP_BITS,
-                                SERIAL_FLOW_CTRL );
+      terminalDebug->configure( serialConfig );
 
-      terminalDebug->enableBuffering( Hardware::SubPeripheral::TX, &tx_cb_dbg_term, tx_buffer_dbg_term.data(), tx_buffer_dbg_term.size() );
-      terminalDebug->enableBuffering( Hardware::SubPeripheral::RX, &rx_cb_dbg_term, rx_buffer_dbg_term.data(), rx_buffer_dbg_term.size() );
+      terminalDebug->enableBuffering( Hardware::SubPeripheral::TX, &tx_cb_dbg_term, tx_buffer_dbg_term.data(),
+                                      tx_buffer_dbg_term.size() );
+      terminalDebug->enableBuffering( Hardware::SubPeripheral::RX, &rx_cb_dbg_term, rx_buffer_dbg_term.data(),
+                                      rx_buffer_dbg_term.size() );
 
       result = terminalDebug->begin( SERIAL_TXFR_MODE, SERIAL_TXFR_MODE );
 
@@ -127,7 +133,7 @@ namespace GPIODriver::HW
       {
         snprintf( message.data(), message.size(), "GPIO Driver Version %s Debug Terminal\r\n", firmwareVersion.data() );
         terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
-        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE, nullptr, 1000 );
       }
 
       return result;
@@ -147,48 +153,48 @@ namespace GPIODriver::HW
       using namespace GPIODriver::HW::SPI;
 
       Chimera::Status_t result = Chimera::CommonStatusCodes::OK;
-      std::array<char, 50> message;
-      message.fill( 0 );
-
-      /*------------------------------------------------
-      Initialize the core SPI driver module
-      ------------------------------------------------*/
-      Chimera::SPI::Setup spiSetup;
-      spiSetup.bitOrder       = SPI_BIT_ORDER;
-      spiSetup.channel        = SPI_CHANNEL;
-      spiSetup.clockFrequency = SPI_CLOCK_FREQUENCY;
-      spiSetup.clockMode      = SPI_CLOCK_MODE;
-      spiSetup.dataSize       = SPI_DATA_SIZE;
-      spiSetup.mode           = SPI_MODE;
-      spiSetup.transferMode   = SPI_TXFR_MODE;
-
-      spiSetup.SCK  = SPI_SCK_PIN;
-      spiSetup.MOSI = SPI_MOSI_PIN;
-      spiSetup.MISO = SPI_MISO_PIN;
-      /* Chip select unused as they are controlled manually */
-
-      instance = std::make_shared<Chimera::SPI::SPIClass>();
-      result |= instance->init( spiSetup );
-      result |= instance->setChipSelectControlMode( Chimera::SPI::ChipSelectMode::MANUAL );
-
-      /*------------------------------------------------
-      Initialize the additional chip select GPIO
-      ------------------------------------------------*/
-      cs0 = std::make_shared<Chimera::GPIO::GPIOClass>();
-      result |= cs0->init( SPI_CS0_PIN );
-
-      cs1 = std::make_shared<Chimera::GPIO::GPIOClass>();
-      result |= cs1->init( SPI_CS1_PIN );
-
-      cs2 = std::make_shared<Chimera::GPIO::GPIOClass>();
-      result |= cs2->init( SPI_CS2_PIN );
-
-      if ( result == Chimera::CommonStatusCodes::OK )
-      {
-        snprintf( message.data(), message.size(), "SPI Driver Initialized On Channel: %d\r\n", spiSetup.channel );
-        terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
-        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
-      }
+//      std::array<char, 50> message;
+//      message.fill( 0 );
+//
+//      /*------------------------------------------------
+//      Initialize the core SPI driver module
+//      ------------------------------------------------*/
+//      Chimera::SPI::Setup spiSetup;
+//      spiSetup.bitOrder       = SPI_BIT_ORDER;
+//      spiSetup.channel        = SPI_CHANNEL;
+//      spiSetup.clockFrequency = SPI_CLOCK_FREQUENCY;
+//      spiSetup.clockMode      = SPI_CLOCK_MODE;
+//      spiSetup.dataSize       = SPI_DATA_SIZE;
+//      spiSetup.mode           = SPI_MODE;
+//      spiSetup.transferMode   = SPI_TXFR_MODE;
+//
+//      spiSetup.SCK  = SPI_SCK_PIN;
+//      spiSetup.MOSI = SPI_MOSI_PIN;
+//      spiSetup.MISO = SPI_MISO_PIN;
+//      /* Chip select unused as they are controlled manually */
+//
+//      instance = std::make_shared<Chimera::SPI::SPIClass>();
+//      result |= instance->init( spiSetup );
+//      result |= instance->setChipSelectControlMode( Chimera::SPI::ChipSelectMode::MANUAL );
+//
+//      /*------------------------------------------------
+//      Initialize the additional chip select GPIO
+//      ------------------------------------------------*/
+//      cs0 = std::make_shared<Chimera::GPIO::GPIOClass>();
+//      result |= cs0->init( SPI_CS0_PIN );
+//
+//      cs1 = std::make_shared<Chimera::GPIO::GPIOClass>();
+//      result |= cs1->init( SPI_CS1_PIN );
+//
+//      cs2 = std::make_shared<Chimera::GPIO::GPIOClass>();
+//      result |= cs2->init( SPI_CS2_PIN );
+//
+//      if ( result == Chimera::CommonStatusCodes::OK )
+//      {
+//        snprintf( message.data(), message.size(), "SPI Driver Initialized On Channel: %d\r\n", spiSetup.channel );
+//        terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
+//        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE, nullptr, 1000 );
+//      }
 
       return result;
     }
@@ -196,11 +202,18 @@ namespace GPIODriver::HW
 
   namespace GPIO
   {
+    static bool s_hardware_initialized = false;
+
     Chimera::GPIO::GPIOClass_sPtr powerEnable    = nullptr;
     Chimera::GPIO::GPIOClass_sPtr statusLED0     = nullptr;
     Chimera::GPIO::GPIOClass_sPtr heartBeat      = nullptr;
     Chimera::GPIO::GPIOClass_sPtr sourceDriverOE = nullptr;
     Chimera::GPIO::GPIOClass_sPtr sinkDriverOE   = nullptr;
+
+    bool initialized()
+    {
+      return s_hardware_initialized;
+    }
 
     Chimera::Status_t initializeGPIO()
     {
@@ -209,6 +222,7 @@ namespace GPIODriver::HW
       Chimera::Status_t result = Chimera::CommonStatusCodes::OK;
       std::array<char, 50> message;
       message.fill( 0 );
+      s_hardware_initialized = false;
 
       /*------------------------------------------------
       LED 0 Init
@@ -242,9 +256,11 @@ namespace GPIODriver::HW
 
       if ( result == Chimera::CommonStatusCodes::OK )
       {
+        s_hardware_initialized = true;
+
         snprintf( message.data(), message.size(), "GPIO Pins Initialized\r\n" );
         terminalDebug->write( reinterpret_cast<const uint8_t *const>( message.data() ), strlen( message.data() ) );
-        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE );
+        terminalDebug->await( Chimera::Event::Trigger::WRITE_COMPLETE, nullptr, 1000 );
       }
 
       return result;
@@ -258,7 +274,7 @@ namespace GPIODriver::HW
     Chimera::Status_t initializeWatchdog()
     {
       watchdog = std::make_shared<Chimera::Watchdog::WatchdogClass>();
-      return watchdog->initialize( WATCHDOG_TIMEOUT_MS );
+      return watchdog->initialize( WATCHDOG_TIMEOUT_MS, 100 );
     }
   }  // namespace Watchdog
 }  // namespace GPIODriver::HW
