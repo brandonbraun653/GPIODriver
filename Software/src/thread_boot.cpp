@@ -50,21 +50,21 @@ namespace GPIODriver::Thread
       Must be left for last because as nothing else can
       kick the dog at this point in the startup.
       -----------------------------------------------*/
-      //initResult |= HW::Watchdog::initializeWatchdog();
+      initResult |= HW::Watchdog::initializeWatchdog();
     }
 
     /*------------------------------------------------
     This is the go-no-go point for the system initialization.
     Either we passed all initialization steps or we didn't.
     ------------------------------------------------*/
-//    if ( initResult != Chimera::CommonStatusCodes::OK )
-//    {
-//      Chimera::Watchdog::invokeTimeout();
-//    }
-//    else
-//    {
-//      HW::Watchdog::watchdog->start();
-//    }
+    if ( initResult != Chimera::CommonStatusCodes::OK )
+    {
+      Chimera::Watchdog::invokeTimeout();
+    }
+    else
+    {
+      HW::Watchdog::watchdog->start();
+    }
 
     /*------------------------------------------------
     Start-up all threads
@@ -84,7 +84,7 @@ namespace GPIODriver::Thread
     ------------------------------------------------*/
     while ( 1 )
     {
-      //HW::Watchdog::watchdog->kick();
+      HW::Watchdog::watchdog->kick();
       delayMilliseconds( HW::Watchdog::WATCHDOG_KICK_RATE_MS );
     }
   }
