@@ -1,14 +1,8 @@
-1. Perhaps for the board interconnect, use an SMD header thing like what JTAG uses. Somehow the stinkin thing
-   needs to be compressed down from the 2.57mm pin headers on the Ver1 prototype.
+1. Board needs to be 50mm x 50mm per 8 channel output
 
-2. Is it possible to blind and buried vias for a not so expensive cost? 
+2. Multiple boards should be stackable to daisy-chain multiple units together and provide more outputs
+   a. Inputs should be buffered
 
-3. How to make it super easy to stack these things? Maybe allow the board to board interconnects be the 
-   smd type that won't even require a cable. Input on the left, output on the right, MCU connect in the
-   back output on the front.
+3. "Active" LEDs should be on the output. Both are supplied from primary external voltage sources.
 
-4. Probably need to reorganize the shift registers or make models for smaller footprints.
-
-5. Use the standoffs as power distribution solutions.
-
-6. Have power and ground routed on both sides of all connectors. Need multiple injection points.
+4. Simplify the hardware interface.
