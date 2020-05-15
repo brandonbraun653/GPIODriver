@@ -1,0 +1,135 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 4500 3100 0    50   Input ~ 0
+HV_PWR_EN
+Text HLabel 4900 2250 0    50   UnSpc ~ 0
++HV_IN
+$Comp
+L Transistor_FET:BS250 Q2
+U 1 1 5ED36D32
+P 5450 2350
+F 0 "Q2" V 5793 2350 50  0000 C CNN
+F 1 "AOD409" V 5702 2350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 5650 2275 50  0001 L CIN
+F 3 "" H 5450 2350 50  0001 L CNN
+F 4 "C36220" V 5450 2350 50  0001 C CNN "LCSC Part Number"
+	1    5450 2350
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5ED36D38
+P 5050 2550
+F 0 "R2" H 4982 2504 50  0000 R CNN
+F 1 "10k" H 4982 2595 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5090 2540 50  0001 C CNN
+F 3 "~" H 5050 2550 50  0001 C CNN
+	1    5050 2550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5450 2550 5450 2800
+Connection ~ 5450 2800
+Wire Wire Line
+	5450 2800 5450 2900
+$Comp
+L power:GND #PWR?
+U 1 1 5ED36D41
+P 5450 3750
+AR Path="/5EBD7FA0/5ED36D41" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5ED36D41" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7D8F/5ED36D41" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 5450 3500 50  0001 C CNN
+F 1 "GND" H 5455 3577 50  0000 C CNN
+F 2 "" H 5450 3750 50  0001 C CNN
+F 3 "" H 5450 3750 50  0001 C CNN
+	1    5450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5ED36D47
+P 5050 3400
+AR Path="/5EBD7EE9/5ED36D47" Ref="R?"  Part="1" 
+AR Path="/5EBD7D8F/5ED36D47" Ref="R3"  Part="1" 
+F 0 "R3" H 4982 3354 50  0000 R CNN
+F 1 "10k" H 4982 3445 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5090 3390 50  0001 C CNN
+F 3 "~" H 5050 3400 50  0001 C CNN
+	1    5050 3400
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5050 2700 5050 2800
+Wire Wire Line
+	5050 2800 5450 2800
+Wire Wire Line
+	5050 2400 5050 2250
+Wire Wire Line
+	5050 2250 5250 2250
+Wire Wire Line
+	5050 3100 5150 3100
+Wire Wire Line
+	5050 3100 5050 3250
+Connection ~ 5050 3100
+Wire Wire Line
+	5450 3300 5450 3650
+Wire Wire Line
+	5050 3650 5450 3650
+Wire Wire Line
+	5050 3550 5050 3650
+Connection ~ 5450 3650
+Wire Wire Line
+	5450 3650 5450 3750
+Wire Wire Line
+	4900 2250 5050 2250
+Connection ~ 5050 2250
+Wire Wire Line
+	5750 2250 5650 2250
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5ED36D63
+P 5350 3100
+AR Path="/5EBD7EE9/5ED36D63" Ref="Q?"  Part="1" 
+AR Path="/5EBD7EE9/5EC7FF1D/5ED36D63" Ref="Q?"  Part="1" 
+AR Path="/5EBD7D8F/5ED36D63" Ref="Q1"  Part="1" 
+F 0 "Q1" H 5540 3146 50  0000 L CNN
+F 1 "2N3904" H 5540 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 3025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5350 3100 50  0001 L CNN
+	1    5350 3100
+	1    0    0    -1  
+$EndComp
+Text HLabel 5750 2250 2    50   UnSpc ~ 0
++HV_OUT
+$Comp
+L Device:R_US R?
+U 1 1 5ED37463
+P 4700 3100
+AR Path="/5EBD7EE9/5ED37463" Ref="R?"  Part="1" 
+AR Path="/5EBD7D8F/5ED37463" Ref="R1"  Part="1" 
+F 0 "R1" V 4495 3100 50  0000 C CNN
+F 1 "100" V 4586 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4740 3090 50  0001 C CNN
+F 3 "~" H 4700 3100 50  0001 C CNN
+	1    4700 3100
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4500 3100 4550 3100
+Wire Wire Line
+	4850 3100 5050 3100
+$EndSCHEMATC

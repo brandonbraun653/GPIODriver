@@ -16,3 +16,6 @@
 [submodule "Software/lib/cxxopts"]
 	path = Software/lib/cxxopts
 	url = https://github.com/brandonbraun653/cxxopts.git
+[submodule "KiCad/lib/KiCadLib"]
+	path = KiCad/lib/KiCadLib
+	url = https://github.com/brandonbraun653/KiCadLib.git

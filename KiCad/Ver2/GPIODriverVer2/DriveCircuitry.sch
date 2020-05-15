@@ -1,0 +1,470 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3500 1400 0    50   Input ~ 0
+SPI_SCK
+Text HLabel 3500 1200 0    50   Input ~ 0
+SPI_MOSI_IN_THIS
+Text HLabel 4650 6000 2    50   Output ~ 0
+SPI_MISO_OUT_THIS
+Text HLabel 3500 1700 0    50   Input ~ 0
+nSPI_W_CS_HI_DRIVE
+Text HLabel 3500 3650 0    50   Input ~ 0
+nSPI_W_CS_LO_DRIVE
+Text HLabel 3500 5700 0    50   Input ~ 0
+nSPI_R_CS_IN_DRIVE
+Text HLabel 1500 1200 2    50   UnSpc ~ 0
++5V
+Text HLabel 1500 1350 2    50   UnSpc ~ 0
++3V3
+Text HLabel 1500 1500 2    50   UnSpc ~ 0
+GND
+$Comp
+L 74xx:74HC595_Nexperia U1
+U 1 1 5EC45DB2
+P 4150 1600
+F 0 "U1" H 4400 2300 50  0000 C CNN
+F 1 "SR_WRITE_HI" H 4450 2200 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4150 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4150 1600 50  0001 C CNN
+	1    4150 1600
+	1    0    0    -1  
+$EndComp
+Text HLabel 5500 2650 2    50   Output ~ 0
+SPI_MOSI_OUT_NEXT
+Text HLabel 3500 5200 0    50   Input ~ 0
+SPI_MISO_IN_NEXT
+$Comp
+L 74xx:74HC595_Nexperia U2
+U 1 1 5EC481CC
+P 4150 3550
+F 0 "U2" H 4350 4250 50  0000 C CNN
+F 1 "SR_WRITE_LO" H 4500 4150 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4150 3550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4150 3550 50  0001 C CNN
+	1    4150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC4F70D
+P 1400 1200
+AR Path="/5EBD7FA0/5EC4F70D" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC4F70D" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 1400 1050 50  0001 C CNN
+F 1 "VDD" V 1418 1327 50  0000 L CNN
+F 2 "" H 1400 1200 50  0001 C CNN
+F 3 "" H 1400 1200 50  0001 C CNN
+	1    1400 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC4F71D
+P 1400 1500
+AR Path="/5EBD7FA0/5EC4F71D" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC4F71D" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 1400 1250 50  0001 C CNN
+F 1 "GND" V 1405 1372 50  0000 R CNN
+F 2 "" H 1400 1500 50  0001 C CNN
+F 3 "" H 1400 1500 50  0001 C CNN
+	1    1400 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC4F9CD
+P 4150 900
+AR Path="/5EBD7FA0/5EC4F9CD" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC4F9CD" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 4150 750 50  0001 C CNN
+F 1 "VDD" H 4167 1073 50  0000 C CNN
+F 2 "" H 4150 900 50  0001 C CNN
+F 3 "" H 4150 900 50  0001 C CNN
+	1    4150 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC50117
+P 4150 2850
+AR Path="/5EBD7FA0/5EC50117" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC50117" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 4150 2700 50  0001 C CNN
+F 1 "VDD" H 4167 3023 50  0000 C CNN
+F 2 "" H 4150 2850 50  0001 C CNN
+F 3 "" H 4150 2850 50  0001 C CNN
+	1    4150 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC506A4
+P 4150 4800
+AR Path="/5EBD7FA0/5EC506A4" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC506A4" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 4150 4650 50  0001 C CNN
+F 1 "VDD" H 4167 4973 50  0000 C CNN
+F 2 "" H 4150 4800 50  0001 C CNN
+F 3 "" H 4150 4800 50  0001 C CNN
+	1    4150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC51086
+P 4150 2400
+AR Path="/5EBD7FA0/5EC51086" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC51086" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 4150 2150 50  0001 C CNN
+F 1 "GND" H 4155 2227 50  0000 C CNN
+F 2 "" H 4150 2400 50  0001 C CNN
+F 3 "" H 4150 2400 50  0001 C CNN
+	1    4150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC515F7
+P 4150 4350
+AR Path="/5EBD7FA0/5EC515F7" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC515F7" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 4150 4100 50  0001 C CNN
+F 1 "GND" H 4155 4177 50  0000 C CNN
+F 2 "" H 4150 4350 50  0001 C CNN
+F 3 "" H 4150 4350 50  0001 C CNN
+	1    4150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC51BA5
+P 4150 6400
+AR Path="/5EBD7FA0/5EC51BA5" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC51BA5" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 4150 6150 50  0001 C CNN
+F 1 "GND" H 4155 6227 50  0000 C CNN
+F 2 "" H 4150 6400 50  0001 C CNN
+F 3 "" H 4150 6400 50  0001 C CNN
+	1    4150 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4800 4150 4900
+Wire Wire Line
+	4150 6300 4150 6400
+Wire Wire Line
+	4150 4250 4150 4350
+Wire Wire Line
+	4150 2300 4150 2400
+Wire Wire Line
+	4150 2850 4150 2950
+Wire Wire Line
+	4150 900  4150 1000
+Text HLabel 3500 1800 0    50   Input ~ 0
+nOUTPUT_DRIVE_EN
+Wire Wire Line
+	3500 1400 3700 1400
+Wire Wire Line
+	3700 1400 3700 3350
+Wire Wire Line
+	3700 3350 3750 3350
+Connection ~ 3700 1400
+Wire Wire Line
+	3700 1400 3750 1400
+$Comp
+L 74HC165:74HC165 U3
+U 1 1 5EC56991
+P 4150 5550
+F 0 "U3" H 4450 6250 50  0000 C CNN
+F 1 "SR_READ_STATE" H 4500 6150 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4150 5400 50  0001 C CNN
+F 3 "VFQFN-16 STMicroelectronics" H 4150 6289 50  0001 C CNN
+	1    4150 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1200 3650 1200
+Wire Wire Line
+	3650 1200 3650 3150
+Wire Wire Line
+	3650 3150 3750 3150
+Connection ~ 3650 1200
+Wire Wire Line
+	3650 1200 3750 1200
+Wire Wire Line
+	3500 1800 3600 1800
+Wire Wire Line
+	3500 1700 3750 1700
+Wire Wire Line
+	3600 1800 3600 3750
+Wire Wire Line
+	3600 3750 3750 3750
+Connection ~ 3600 1800
+Wire Wire Line
+	3600 1800 3750 1800
+Wire Wire Line
+	3500 3650 3750 3650
+Wire Wire Line
+	4550 6000 4650 6000
+Text HLabel 3500 5500 0    50   Input ~ 0
+nOUTPUT_READ_EN
+Wire Wire Line
+	3700 3350 3700 5400
+Wire Wire Line
+	3700 5400 3750 5400
+Connection ~ 3700 3350
+Wire Wire Line
+	3500 5200 3750 5200
+Wire Wire Line
+	3500 5500 3750 5500
+Wire Wire Line
+	3500 5700 3750 5700
+$Comp
+L 74xGxx:74LVC1G3157 U?
+U 1 1 5EC6A468
+P 5200 2650
+AR Path="/5EBD7FA0/5EC6A468" Ref="U?"  Part="1" 
+AR Path="/5EBD7EE9/5EC6A468" Ref="U4"  Part="1" 
+F 0 "U4" H 4950 2250 50  0000 C CNN
+F 1 "74LVC1G3157" H 4800 2350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 5200 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 5200 2650 50  0001 C CNN
+	1    5200 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC6F9F2
+P 5200 2450
+AR Path="/5EBD7FA0/5EC6F9F2" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC6F9F2" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 5200 2200 50  0001 C CNN
+F 1 "GND" H 5205 2277 50  0000 C CNN
+F 2 "" H 5200 2450 50  0001 C CNN
+F 3 "" H 5200 2450 50  0001 C CNN
+	1    5200 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC70089
+P 5200 2850
+AR Path="/5EBD7FA0/5EC70089" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC70089" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 5200 2700 50  0001 C CNN
+F 1 "VDD" H 5218 3023 50  0000 C CNN
+F 2 "" H 5200 2850 50  0001 C CNN
+F 3 "" H 5200 2850 50  0001 C CNN
+	1    5200 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 2550 4900 2550
+Wire Wire Line
+	4900 2550 4900 2100
+Wire Wire Line
+	4550 2100 4900 2100
+Wire Wire Line
+	5000 2750 4900 2750
+Wire Wire Line
+	4900 2750 4900 4050
+Wire Wire Line
+	4550 4050 4900 4050
+Text HLabel 5500 2450 2    50   Input ~ 0
+nSPI_W_CS_HI_DRIVE
+Wire Wire Line
+	5500 2450 5400 2450
+Wire Wire Line
+	5500 2650 5400 2650
+Text Notes 5350 2950 0    50   ~ 0
+Truth Table:\nLO: 3\nHI: 1
+$Comp
+L Device:R_US R4
+U 1 1 5EC75561
+P 3500 3100
+F 0 "R4" H 3432 3054 50  0000 R CNN
+F 1 "10k" H 3432 3145 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3540 3090 50  0001 C CNN
+F 3 "~" H 3500 3100 50  0001 C CNN
+	1    3500 3100
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 5EC75C78
+P 3550 950
+F 0 "R5" H 3482 904 50  0000 R CNN
+F 1 "10k" H 3482 995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3590 940 50  0001 C CNN
+F 3 "~" H 3550 950 50  0001 C CNN
+	1    3550 950 
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3550 1500 3750 1500
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC79607
+P 3550 750
+AR Path="/5EBD7FA0/5EC79607" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC79607" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 3550 600 50  0001 C CNN
+F 1 "VDD" H 3567 923 50  0000 C CNN
+F 2 "" H 3550 750 50  0001 C CNN
+F 3 "" H 3550 750 50  0001 C CNN
+	1    3550 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 750  3550 800 
+Wire Wire Line
+	3550 1100 3550 1500
+Wire Wire Line
+	3500 3250 3500 3450
+Wire Wire Line
+	3500 3450 3750 3450
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC7E226
+P 3500 2900
+AR Path="/5EBD7FA0/5EC7E226" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC7E226" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 3500 2750 50  0001 C CNN
+F 1 "VDD" H 3517 3073 50  0000 C CNN
+F 2 "" H 3500 2900 50  0001 C CNN
+F 3 "" H 3500 2900 50  0001 C CNN
+	1    3500 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2900 3500 2950
+NoConn ~ 4550 6100
+$Sheet
+S 7400 1450 650  750 
+U 5EC7FF1D
+F0 "DriveChannel1" 50
+F1 "DriveChannel1.sch" 50
+F2 "LO_EN" I L 7400 2000 50 
+F3 "HI_EN" I L 7400 1900 50 
+F4 "OUT_STATE" O L 7400 2100 50 
+F5 "+HV" U L 7400 1500 50 
+F6 "GND" U L 7400 1700 50 
+F7 "+5V" U L 7400 1600 50 
+F8 "DriveOutput" O R 8050 1800 50 
+$EndSheet
+Text GLabel 7350 1900 0    50   Input ~ 0
+CH1_HI_EN
+Text GLabel 7350 2000 0    50   Input ~ 0
+CH1_LO_EN
+Text GLabel 7350 2100 0    50   Output ~ 0
+CH1_STATE
+Text GLabel 5250 1300 2    50   Output ~ 0
+CH1_HI_EN
+Text GLabel 5250 3250 2    50   Output ~ 0
+CH1_LO_EN
+Text GLabel 5250 5200 2    50   Input ~ 0
+CH1_STATE
+Wire Wire Line
+	5250 3250 4550 3250
+Wire Wire Line
+	5250 1300 4550 1300
+Wire Wire Line
+	4550 5200 5250 5200
+Wire Wire Line
+	7350 1900 7400 1900
+Wire Wire Line
+	7350 2000 7400 2000
+Wire Wire Line
+	7350 2100 7400 2100
+$Comp
+L power:VDD #PWR?
+U 1 1 5EC87625
+P 7300 1600
+AR Path="/5EBD7FA0/5EC87625" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC87625" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 7300 1450 50  0001 C CNN
+F 1 "VDD" V 7318 1727 50  0000 L CNN
+F 2 "" H 7300 1600 50  0001 C CNN
+F 3 "" H 7300 1600 50  0001 C CNN
+	1    7300 1600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7300 1600 7400 1600
+$Comp
+L power:GND #PWR?
+U 1 1 5EC88D79
+P 7300 1700
+AR Path="/5EBD7FA0/5EC88D79" Ref="#PWR?"  Part="1" 
+AR Path="/5EBD7EE9/5EC88D79" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 7300 1450 50  0001 C CNN
+F 1 "GND" V 7305 1572 50  0000 R CNN
+F 2 "" H 7300 1700 50  0001 C CNN
+F 3 "" H 7300 1700 50  0001 C CNN
+	1    7300 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 1700 7400 1700
+$Comp
+L power:VBUS #PWR0119
+U 1 1 5ECA7DD9
+P 7300 1500
+F 0 "#PWR0119" H 7300 1350 50  0001 C CNN
+F 1 "VBUS" V 7315 1627 50  0000 L CNN
+F 2 "" H 7300 1500 50  0001 C CNN
+F 3 "" H 7300 1500 50  0001 C CNN
+	1    7300 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7300 1500 7400 1500
+Text HLabel 1500 1100 2    50   UnSpc ~ 0
++HV
+$Comp
+L power:VBUS #PWR0120
+U 1 1 5ED2A626
+P 1400 1100
+F 0 "#PWR0120" H 1400 950 50  0001 C CNN
+F 1 "VBUS" V 1415 1227 50  0000 L CNN
+F 2 "" H 1400 1100 50  0001 C CNN
+F 3 "" H 1400 1100 50  0001 C CNN
+	1    1400 1100
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1500 1350
+Wire Wire Line
+	1400 1100 1500 1100
+Wire Wire Line
+	1400 1200 1500 1200
+Wire Wire Line
+	1400 1500 1500 1500
+$Comp
+L Connector_Generic:Conn_01x08 J?
+U 1 1 5EC4DC91
+P 9250 2000
+AR Path="/5EC4DC91" Ref="J?"  Part="1" 
+AR Path="/5EBD7EE9/5EC4DC91" Ref="J5"  Part="1" 
+F 0 "J5" H 9330 1992 50  0000 L CNN
+F 1 "DriveOutput" H 9330 1901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal" H 9250 2000 50  0001 C CNN
+F 3 "~" H 9250 2000 50  0001 C CNN
+	1    9250 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 1800 9050 1800
+$EndSCHEMATC
