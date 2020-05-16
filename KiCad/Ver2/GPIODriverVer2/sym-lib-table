@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name 74HC165)(type Legacy)(uri D:/git/Projects/GPIODriver/KiCad/lib/KiCadLib/74HC165/74HC165.lib)(options "")(descr ""))
+  (lib (name GPIODriverVer2-rescue)(type Legacy)(uri ${KIPRJMOD}/GPIODriverVer2-rescue.lib)(options "")(descr ""))
 )
